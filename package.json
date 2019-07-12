@@ -1,0 +1,13 @@
+{
+  "name": "task-1",
+  "version": "1.0.0",
+  "repository": "git@github.com:sms-system/curly-chainsaw.git",
+  "author": "Serge Smirnov <serge.roberval@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "stylus": "^0.54.5"
+  },
+  "scripts": {
+    "build": "stylus -w srс/style.styl -o build/style.css"
+  }
+}
