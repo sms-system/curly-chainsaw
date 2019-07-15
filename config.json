@@ -1,0 +1,6 @@
+{
+  "BEM_SEPARATORS": {
+    "ELEM": "__",
+    "MOD": "-"
+  }
+}

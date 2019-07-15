@@ -1,0 +1,37 @@
+json('../config.json')
+
+e(name)
+  &{BEM_SEPARATORS-ELEM}{name}
+    {block}
+
+m(name, value=null)
+  name = value ? name + BEM_SEPARATORS-MOD + value : name
+  &{BEM_SEPARATORS-MOD}{name}
+    {block}
+
+// --- HELPERS ---
+
+text-color(primary, secondary, ghost, link)
+  .text
+    +m(view, 'primary')
+      color primary
+    +m(view, 'secondary')
+      color secondary
+    +m(view, 'ghost')
+      color ghost
+    +m(view, 'link')
+      color link
+
+bg-color(default, accent, border)
+  background-color default
+  border-color border
+
+// --- BLOCK ---
+
+.theme
+  +m(color, project-default)
+    bg-color(#FFFFFF, #0056B3, #000000)
+    text-color(#000000, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), #0070f0)
+  +m(color, project-brand)
+    bg-color(#0070f0, #FFFFFF, #FFFFFF)
+    text-color(#FFFFFF, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3), #FFFFFF)
