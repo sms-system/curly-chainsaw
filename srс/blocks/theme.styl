@@ -1,29 +1,141 @@
 .theme
+
   // --- HELPERS ---
-  bg-color(default, accent, border)
-    background-color default
-    border-color border
+  bg-colors($default, $accent, $border)
+    background-color $default
+    border-color $border
 
-  text-color(primary, secondary, ghost, link)
+  text-color(name, color)
     .text
-      +m(view, 'primary')
-        color primary
-      +m(view, 'secondary')
-        color secondary
-      +m(view, 'ghost')
-        color ghost
-      +m(view, 'link')
-        color link
-  // --- 
+      +m('view', name)
+        +cache('text-color' + color)
+          color color
 
-  +m(color, project-default)
-    bg-color(#FFFFFF, #0056B3, #000000)
-    text-color(#000000, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), #0070f0)
+  size(name, height, line-height)
+    .text
+      +m('size', name)
+        font-size height
+        line-height line-height
+        .word
+          height height
 
-  +m(color, project-brand)
-    bg-color(#0070f0, #FFFFFF, #FFFFFF)
-    text-color(#FFFFFF, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3), #FFFFFF)
+  space-a(name, size)
+    +m('space-a', name)
+      padding size
+  space-v(name, size)
+    +m('space-v', name)
+      +cache('space-v' + size)
+        padding-top size
+        padding-bottom size
+  space-h(name, size)
+    +m('space-h', name)
+      padding-left size
+      padding-right size
+  space-b(name, size)
+    +m('space-b', name)
+      padding-bottom size
+  indent-b(name, size)
+    +m('indent-b', name)
+      +cache('indent-b' + size)
+        margin-bottom size
+  indent-t(name, size)
+    +m('indent-t', name)
+      margin-top size
+  indent-r(name, size)
+    +m('indent-r', name)
+      margin-right size
+  indent-l(name, size)
+    +m('indent-l', name)
+      margin-left size
 
-  +m(color, project-brand)
-    bg-color(#0070f0, #FFFFFF, #FFFFFF)
-    text-color(#FFFFFF, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3), #FFFFFF)
+  space(name, size)
+    .layout
+      +e('container')
+        space-v name size
+        indent-b name size
+    .card
+      +e('content')
+        space-a name size
+      +e('footer')
+        space-a name size
+    .form
+      +e('item')
+        indent-b name size
+        space-h name size
+        space-v name size
+    .informer
+      +e('content')
+        space-a name size
+      +e('action')
+        space-a name size
+    .list
+      +e('item')
+        indent-t name size
+        indent-b name size
+        space-b name size
+        space-a name size
+    .icon-plus
+      +e('icon')
+        indent-r name size
+        indent-l name size
+    .section
+      indent-b name size
+      space-v name size
+
+  // --- COLOR MODS
+  +m('color', project-default)
+    bg-colors #FFFFFF, #0056B3, #000000
+    text-color 'primary' #000000
+    text-color 'secondary' rgba(0, 0, 0, 0.6)
+    text-color 'ghost' rgba(0, 0, 0, 0.3)
+    text-color 'link' #0070f0
+
+  +m('color', project-brand)
+    bg-colors #0070f0, #FFFFFF, #FFFFFF
+    text-color 'primary' #FFFFFF
+    text-color 'secondary' rgba(255, 255, 255, 0.6)
+    text-color 'ghost' rgba(255, 255, 255, 0.3)
+    text-color 'link' #FFFFFF
+
+  +m('color', project-inverse)
+    bg-colors #000000, #FFFFFF, #FFFFFF
+    text-color 'primary' #FFFFFF
+    text-color 'secondary' rgba(255, 255, 255, 0.6)
+    text-color 'ghost' rgba(255, 255, 255, 0.3)
+    text-color 'link' #0070f0
+
+  +m('color', project-warning)
+    bg-colors #FF9900, #FFFFFF, #FFFFFF
+    text-color 'primary' #FFFFFF
+    text-color 'secondary' rgba(255, 255, 255, 0.6)
+    text-color 'ghost' rgba(255, 255, 255, 0.3)
+    text-color 'link' #FFFFFF
+
+  +m('color', megafon-brand)
+    bg-colors #1FA55D, #FFFFFF, #FFFFFF
+    text-color 'primary' #FFFFFF
+    text-color 'secondary' rgba(255, 255, 255, 0.6)
+    text-color 'ghost' rgba(255, 255, 255, 0.3)
+    text-color 'link' #FFFFFF
+  
+  // --- SIZE MODS
+  +m('size', default)
+    size 's' 7px 18px
+    size 'm' 8px 21px
+    size 'l' 10px 25px
+    size 'xl' 11px 28px
+    size 'xxl' 13px 34px
+
+  // --- SPACE MODS
+  +m('space', default)
+    space 'xxxs' 2px
+    space 'xxs' 4px
+    space 'xs' 8px
+    space 's' 12px
+    space 'm' 16px
+    space 'l' 20px
+    space 'xl' 24px
+    space 'xxl' 32px
+    space 'xxxl' 40px
+    space 'xxxxl' 48px
+    space 'xxxxxl' 72px
