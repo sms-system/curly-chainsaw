@@ -102,16 +102,16 @@ mods--col-gap--full =
   grid-column-gap var(--gap)
 
 mods--col-gap--half =
-  grid-column-gap var(s('--gap / 2'))
+  grid-column-gap calc(var(--gap) / 2)
 
 mods--col-gap--two-thirds =
-  grid-column-gap var(s('--gap / 3 * 2'))
+  grid-column-gap calc(var(--gap) / 3 * 2)
 
 mods--row-gap--full =
   grid-row-gap var(--gap)
 
 mods--row-gap--half =
-  grid-row-gap var(s('--gap / 2'))
+  grid-row-gap calc(var(--gap) / 2)
 
 mods--m-col(count)
   grid-column span count
