@@ -1,4 +1,9 @@
-const config = require('../config.json')
+const config = {
+  "BEM_SEPARATORS": {
+    "ELEM": "__",
+    "MOD": "-"
+  }
+}
 const ELEM_SEPARATOR = config.BEM_SEPARATORS.ELEM
 const MOD_SEPARATOR = config.BEM_SEPARATORS.MOD
 
@@ -31,7 +36,7 @@ function getClassesFromBEMJSON ({ mix = [], ...props }) {
     classes.push(baseClass)
 
     const postfixes = { ...mods, ...elemMods }
-    for(mod in postfixes) {
+    for(let mod in postfixes) {
       const value = postfixes[mod]
       if (!value) continue
       classes.push(baseClass + MOD_SEPARATOR + mod + (typeof value === 'string'? MOD_SEPARATOR + value : ''))
@@ -41,4 +46,6 @@ function getClassesFromBEMJSON ({ mix = [], ...props }) {
   return classes
 }
 
-module.exports = parseBEMJSONContent
+export default function (obj) {
+  return parseBEMJSONContent(obj)
+}
