@@ -1,0 +1,126 @@
+:root
+  --border-width 3px
+
+// -- ALIGNMENT --
+
+mods--align--center =
+  margin-left 0
+  margin-right 0
+
+mods--distribute--default =
+  display flex
+  justify-content baseline
+
+mods--distribute--center =
+  display flex
+  justify-content center
+
+mods--distribute--between =
+  display flex
+  justify-content space-between
+
+mods--distribute--right =
+  display flex
+  justify-content right
+
+mods--vertical-align--center =
+  display flex
+  align-items center
+
+mods--vertical-align--top =
+  display flex
+  align-items flex-start
+
+mods--vertical-align--bottom =
+  display flex
+  align-items flex-end
+
+// --- SPACE ---
+
+mods--space-a(size)
+  padding cssvar('space-'+size)
+
+mods--space-v(size)
+  padding-top cssvar('space-'+size)
+  padding-bottom cssvar('space-'+size)
+
+mods--space-h(size)
+  padding-left cssvar('space-'+size)
+  padding-right cssvar('space-'+size)
+
+mods--space-b(size)
+  padding-bottom cssvar('space-'+size)
+
+mods--indent-b(size)
+  margin-bottom cssvar('space-'+size)
+
+mods--indent-t(size)
+  margin-top cssvar('space-'+size)
+
+mods--indent-r(size)
+  margin-right cssvar('space-'+size)
+
+mods--indent-l(size)
+  margin-left cssvar('space-'+size)
+
+// --- SIZE ---
+
+mods--size(size)
+  font-size cssvar('text-size-'+size)
+  line-height cssvar('line-height-'+size)
+  +e('word')
+    height cssvar('text-size-'+size)
+
+// --- BORDER ---
+
+border-mix =
+  border-width var(--border-width)
+  border-color var(--bg-color-border)
+
+mods--border--all =
+  {border-mix}
+  border-style solid
+
+mods--border--bottom =
+  {border-mix}
+  border-bottom-style solid
+  &:last-child
+    border-bottom-style none
+
+mods--border--top =
+  {border-mix}
+  border-top-style solid
+  &:first-child
+    border-top-style none
+
+// --- GRID ---
+
+mods--m-columns(count)
+  grid-template-columns repeat(count, 1fr)
+
+mods--col-gap--full =
+  grid-column-gap var(--gap)
+
+mods--col-gap--half =
+  grid-column-gap var(s('--gap / 2'))
+
+mods--col-gap--two-thirds =
+  grid-column-gap var(s('--gap / 3 * 2'))
+
+mods--row-gap--full =
+  grid-row-gap var(--gap)
+
+mods--row-gap--half =
+  grid-row-gap var(s('--gap / 2'))
+
+mods--m-col(count)
+  grid-column span count
+
+// --- COLOR ---
+
+mods--bg-view(color)
+  background-color cssvar('bg-color-'+color)
+
+mods--text-view(color)
+  +e('word')
+    background-color cssvar('text-color-'+color)

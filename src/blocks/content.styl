@@ -1,0 +1,78 @@
+.text
+  mods('align', 'center')
+  mods('size', 's' 'm' 'l' 'xl' 'xxl')
+  +m('type', 'h1') { margin 15px 0 21px }
+  +m('type', 'h2') { margin 48px 0 20px }
+  +m('type', 'h3') { margin 43px 0 0 }
+  +m('type', 'p') { margin 15px 0 21px }
+  mods('view', 'primary' 'secondary' 'ghost' 'link', 'text-')
+  +e('word')
+    +with-bm('size', 's')
+      +m('width', 's') { width 20px }
+      +m('width', 'm') { width 48px }
+      +m('width', 'l') { width 100px }
+    +with-bm('size', 'm')
+      +m('width', 's') { width 24px }
+      +m('width', 'm') { width 56px }
+      +m('width', 'l') { width 114px }
+    +with-bm('size', 'l')
+      +m('width', 's') { width 28px }
+      +m('width', 'm') { width 68px }
+      +m('width', 'l') { width 138px }
+    +with-bm('size', 'xl')
+      +m('width', 's') { width 32px }
+      +m('width', 'm') { width 74px }
+      +m('width', 'l') { width 154px }
+    +with-bm('size', 'xxl')
+      +m('width', 's') { width 36px }
+      +m('width', 'm') { width 88px }
+      +m('width', 'l') { width 184px }
+
+.avatar
+  +m('size', 'm') { width 60px; height 60px }
+  
+.brand-logo
+  +m('name', 'yota') { background-color #00c0f8 }
+  +m('name', 'megafon') { background-color #33c778 }
+  +m('name', 'kcell') { background-color #692b96 }
+  +m('name', 'mts') { background-color #f70000 }
+  +m('size', 'xxs') { width 24px; height 24px }
+  +m('size', 'xs') { width 32px; height 32px }
+  +m('size', 's') { width 40px; height 40px }
+  +m('size', 'm') { width 60px; height 60px }
+  +m('size', 'l') { width 80px; height 80px }
+
+.placeholder
+  background-color var(--text-color-primary)
+  +m('size', 'm') { width 72px; height 72px }
+  mods('view', 'primary', 'text-')
+
+.button
+  background-color var(--bg-color-accent)
+  width 200px
+  +m('size', 's') { height 24px }
+  +m('size', 'm') { height 32px }
+  +m('size', 'l') { height 42px }
+  +m('size', 'xl') { height 56px }
+  +m('size', 'xxl') { height 64px }
+  +m('width', 'full') { width 100% }
+
+.input
+  width 100%
+  {border-mix}
+  border-style solid
+  +m('size', 's') { height 24px }
+  +m('size', 'm') { height 32px }
+  +m('size', 'l') { height 42px }
+  +m('size', 'xl') { height 56px }
+  +m('size', 'xxl') { height 64px }
+
+.image
+  width 100%
+  {border-mix}
+  border-style solid
+  +m('size', 's') { height 24px }
+  +m('size', 'm') { height 32px }
+  +m('size', 'l') { height 42px }
+  +m('size', 'xl') { height 56px }
+  +m('size', 'xxl') { height 64px }

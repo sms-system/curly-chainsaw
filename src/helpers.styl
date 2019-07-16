@@ -1,0 +1,36 @@
+json('../config.json')
+
+e(name)
+  if called-from[0] in ('mod' 'm')
+    & ^[0]{BEM_SEPARATORS-ELEM}{name}
+      {block}
+  else
+    &{BEM_SEPARATORS-ELEM}{name}
+      {block}
+
+m(name, value=null)
+  name = value ? name + BEM_SEPARATORS-MOD + value : name
+  &{BEM_SEPARATORS-MOD}{name}
+    {block}
+  
+with-bm(name, val=null)
+  name = val ? name + BEM_SEPARATORS-MOD + val : name
+  ^[0]{BEM_SEPARATORS-MOD}{name} &
+    {block}
+
+mods(name, values, search-prefix='')
+  search-name = search-prefix + name
+  for val in values
+    +m(name, val)
+      mod = lookup('mods--'+search-name)
+      if typeof(mod) is 'function'
+        mod(val)
+      else
+        mod = lookup('mods--'+search-name+'--'+val)
+        if typeof(mod) is 'null'
+          warn('MOD: "'+ search-name + '", VALUE: "' + val + '" is missing')
+        else
+          {mod}
+
+cssvar(var)
+  var(s('--'+var))

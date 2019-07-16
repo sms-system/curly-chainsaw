@@ -1,0 +1,62 @@
+.card
+  mods('border', 'all')
+  mods('view', 'default', 'bg-')
+  +e('content')
+    mods('distribute', 'center')
+    mods('vertical-align', 'center')
+    mods('space-a', 'm' 'xl' 'l' 'xxl')
+  +e('footer')
+    mods('distribute', 'between' 'center' 'right')
+    mods('vertical-align', 'center' 'top' 'bottom')
+    mods('space-a', 'm' 'l' 'xl' 'xxl')
+
+.form
+  mods('border', 'all')
+  mods('view', 'default', 'bg-')
+  +e('item')
+    mods('border', 'bottom')
+    mods('distribute', 'between')
+    mods('vertical-align', 'center')
+    mods('indent-b', 'xxxs' 'xxs' 's' 'm' 'l' 'xl' 'xxl' 'xxxl' 'xxxxl')
+    mods('space-h', 'xxxs' 'xxs' 's' 'm' 'l' 'xl' 'xxl' 'xxxl' 'xxxxl')
+    mods('space-v', 'xxxs' 'xxs' 's' 'm' 'l' 'xl' 'xxl' 'xxxl' 'xxxxl')
+  +e('label')
+    +m('width', 'default') { width 35% }
+  e('control')
+  e('header')
+  e('content')
+  e('content-item')
+  e('footer')
+
+.informer
+  mods('border', 'all')
+  mods('view', 'default', 'bg-')
+  +e('content')
+    mods('distribute', 'default' 'between' 'center')
+    mods('space-a', 'xl' 'xxl')
+  +e('action')
+    mods('distribute', 'default' 'between' 'center')
+    mods('space-a', 'xl' 'xxl')
+
+.list
+  mods('border', 'all')
+  mods('view', 'default', 'bg-')
+  +e('item')
+    mods('border', 'bottom' 'top')
+    mods('distribute', 'between')
+    mods('vertical-align', 'center')
+    mods('indent-t', 'm')
+    mods('indent-b', 's' 'm' 'l' 'xl')
+    mods('space-b', 's')
+    mods('space-a', 'l')
+
+.icon-plus
+  mods('vertical-align', 'center')
+  +e('icon')
+    mods('indent-r', 's' 'm')
+    mods('indent-l', 'l')
+  e('block')
+
+.section
+  mods('indent-b', 'xxl' 'xxxxl')
+  mods('space-v', 'xxl' 'xxxxl')

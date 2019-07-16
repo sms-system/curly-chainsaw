@@ -1,0 +1,14 @@
+.layout
+  +e('container')
+    mods('align', 'center')
+    +m('size', 's') { width 880px }
+    +m('size', 'm') { width 1144px }
+    mods('space-v', 'xxxxl' 'xxxxxl')
+    mods('indent-b', 'xxl' 'xxxxl')
+
+.grid
+  mods('m-columns', 12 10)
+  mods('col-gap', 'two-thirds' 'full' 'half')
+  mods('row-gap', 'half' 'full')
+  +e('fraction')
+    mods('m-col', 2 3 4 5 8)
