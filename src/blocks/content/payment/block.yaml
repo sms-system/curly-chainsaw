@@ -18,7 +18,7 @@ content:
       view: primary
       size: xxl
     content:
-      elem: word
+    - elem: word
       elemMods:
         width: l
 - elem: content
@@ -30,14 +30,13 @@ content:
       space-h: xl
       border: bottom
   content:
-  - &form-item
-    block: form
+  - block: form
     elem: item
     elemMods:
       indent-b: xl
       distribute: between
       vertical-align: center
-    content:
+    content: &payment-form-row
     - elem: label
       elemMods:
         width: default
@@ -50,10 +49,17 @@ content:
           elem: word
           elemMods:
             width: l
-    - block: input
-      mods:
-        size: l
-  - *form-item
+    - elem: control
+      content:
+      - block: input
+        mods:
+          size: l
+  - block: form
+    elem: item
+    elemMods:
+      distribute: between
+      vertical-align: center
+    content: *payment-form-row
 - elem: footer
   mix:
   - block: form

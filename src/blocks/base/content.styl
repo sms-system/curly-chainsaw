@@ -1,4 +1,6 @@
 .text
+  font-size 0
+  line-height 0
   mods('align', 'center')
   mods('size', 's' 'm' 'l' 'xl' 'xxl')
   +m('type', 'h1') { margin 15px 0 21px }
@@ -7,6 +9,12 @@
   +m('type', 'p') { margin 15px 0 21px }
   mods('view', 'primary' 'secondary' 'ghost' 'link', 'text-')
   +e('word')
+    // Close to real text behavior implementation
+    display inline-block
+    overflow hidden
+    letter-spacing -2px
+    &::after
+      content '██████████████████████████████████'
     +with-bm('size', 's')
       +m('width', 's') { width 20px }
       +m('width', 'm') { width 48px }
@@ -43,12 +51,12 @@
   +m('size', 'l') { width 80px; height 80px }
 
 .placeholder
-  background-color var(--text-color-primary)
+  mixmod('view', 'primary', 'bg-from-text-color-')
   +m('size', 'm') { width 72px; height 72px }
-  mods('view', 'primary', 'text-')
+  mods('view', 'primary', 'bg-from-text-color-')
 
 .button
-  background-color var(--bg-color-accent)
+  mixmod('view', 'accent', 'bg-')
   width 200px
   +m('size', 's') { height 24px }
   +m('size', 'm') { height 32px }
@@ -59,8 +67,7 @@
 
 .input
   width 100%
-  {border-mix}
-  border-style solid
+  mixmod('border', 'all')
   +m('size', 's') { height 24px }
   +m('size', 'm') { height 32px }
   +m('size', 'l') { height 42px }
@@ -69,8 +76,7 @@
 
 .image
   width 100%
-  {border-mix}
-  border-style solid
+  mixmod('border', 'all')
   +m('size', 's') { height 24px }
   +m('size', 'm') { height 32px }
   +m('size', 'l') { height 42px }

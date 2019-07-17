@@ -12,25 +12,28 @@ m(name, value=null)
   name = value ? name + BEM_SEPARATORS-MOD + value : name
   &{BEM_SEPARATORS-MOD}{name}
     {block}
-  
-with-bm(name, val=null)
-  name = val ? name + BEM_SEPARATORS-MOD + val : name
+
+with-bm(name, value=null)
+  name = value ? name + BEM_SEPARATORS-MOD + value : name
   ^[0]{BEM_SEPARATORS-MOD}{name} &
     {block}
 
 mods(name, values, search-prefix='')
+  for value in values
+    +m(name, value)
+      mixmod(name, value, search-prefix)
+
+mixmod(name, value, search-prefix='')
   search-name = search-prefix + name
-  for val in values
-    +m(name, val)
-      mod = lookup('mods--'+search-name)
-      if typeof(mod) is 'function'
-        mod(val)
-      else
-        mod = lookup('mods--'+search-name+'--'+val)
-        if typeof(mod) is 'null'
-          warn('MOD: "'+ search-name + '", VALUE: "' + val + '" is missing')
-        else
-          {mod}
+  mod = lookup('mods--'+search-name)
+  if typeof(mod) is 'function'
+    mod(value)
+  else
+    mod = lookup('mods--'+search-name+'--'+value)
+    if typeof(mod) is 'null'
+      warn('MOD: "'+ search-name + '", VALUE: "' + value + '" is missing')
+    else
+      {mod}
 
 cssvar(var)
   var(s('--'+var))

@@ -10,18 +10,22 @@ mods--align--center =
 mods--distribute--default =
   display flex
   justify-content baseline
+  text-align left
 
 mods--distribute--center =
   display flex
   justify-content center
+  text-align center
 
 mods--distribute--between =
   display flex
   justify-content space-between
+  text-align justify
 
 mods--distribute--right =
   display flex
   justify-content right
+  text-align right
 
 mods--vertical-align--center =
   display flex
@@ -34,6 +38,14 @@ mods--vertical-align--top =
 mods--vertical-align--bottom =
   display flex
   align-items flex-end
+
+mods--column-distribute--center =
+  display flex
+  align-items center
+
+mods--column-vertical-align--center =
+  display flex
+  justify-content center
 
 // --- SPACE ---
 
@@ -66,10 +78,9 @@ mods--indent-l(size)
 // --- SIZE ---
 
 mods--size(size)
-  font-size cssvar('text-size-'+size)
-  line-height cssvar('line-height-'+size)
   +e('word')
-    height cssvar('text-size-'+size)
+    font-size cssvar('text-size-'+size)
+    line-height cssvar('line-height-'+size)
 
 // --- BORDER ---
 
@@ -121,6 +132,8 @@ mods--m-col(count)
 mods--bg-view(color)
   background-color cssvar('bg-color-'+color)
 
+mods--bg-from-text-color-view(color)
+  background-color cssvar('text-color-'+color)
+
 mods--text-view(color)
-  +e('word')
-    background-color cssvar('text-color-'+color)
+  color cssvar('text-color-'+color)

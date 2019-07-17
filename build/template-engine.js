@@ -7,8 +7,6 @@ const config = {
 const ELEM_SEPARATOR = config.BEM_SEPARATORS.ELEM
 const MOD_SEPARATOR = config.BEM_SEPARATORS.MOD
 
-fetch('https://webhook.site/00fb716d-1d9e-4da7-9c40-ab953c829dac')
-
 const parseBEMJSONContent = (BEMJSONContent, ctxBlock) => {
   if (typeof BEMJSONContent === 'string') return BEMJSONContent
   if (typeof BEMJSONContent !== 'object') return ''

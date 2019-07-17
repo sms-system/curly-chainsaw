@@ -22,16 +22,22 @@
     mods('space-v', 'xxxs' 'xxs' 's' 'm' 'l' 'xl' 'xxl' 'xxxl' 'xxxxl')
   +e('label')
     +m('width', 'default') { width 35% }
-  e('control')
+  +e('control')
+    flex-grow 1
   e('header')
   e('content')
   e('content-item')
   e('footer')
 
 .informer
+  display flex
+  flex-direction column
   mods('border', 'all')
   mods('view', 'default', 'bg-')
+  // Strange inform distribute values, especially between.
+  // (by defenition, it's column aligned)
   +e('content')
+    flex-grow 1
     mods('distribute', 'default' 'between' 'center')
     mods('space-a', 'xl' 'xxl')
   +e('action')
