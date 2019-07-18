@@ -1,6 +1,6 @@
 {
   "BEM_SEPARATORS": {
     "ELEM": "__",
-    "MOD": "-"
+    "MOD": "_"
   }
 }

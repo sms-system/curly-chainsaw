@@ -2,12 +2,15 @@
   "name": "task-1",
   "version": "1.0.0",
   "scripts": {
-    "build": "stylus -w src/style.styl -o build/style.css"
+    "start": "parcel --no-cache src/index.pug",
+    "build": "stylus src/style.styl -o build/style.css"
   },
   "repository": "git@github.com:sms-system/curly-chainsaw.git",
   "author": "Serge Smirnov <serge.roberval@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "parcel": "^1.12.3",
+    "pug": "^2.0.4",
     "stylus": "^0.54.5",
     "yaml": "^1.6.0"
   }

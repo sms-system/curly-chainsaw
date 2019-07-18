@@ -1,0 +1,6 @@
+warning (informer_view_default informer_border_all theme_color_project-warning)
+  warning__content (informer__content_distribute_center informer__content_space-a_xxl)
+    placeholder (placeholder_view_primary placeholder_size_m)
+    text (text_view_primary text_size_xl) (s + l + m + m + s + m + l + s + m)
+  warning__button-wrapper (informer__action_distribute_center informer__action_space-a_xl)
+    button (button_size_l)

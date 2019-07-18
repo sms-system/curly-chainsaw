@@ -25,19 +25,23 @@
     --space-xxxxl 48px
     --space-xxxxxl 72px
 
+  default-colors =
+    --bg-color-default #FFFFFF
+    --bg-color-accent #0056B3
+    --bg-color-border #000000
+    --text-color-primary #000000
+    --text-color-secondary rgba(0, 0, 0, 0.6)
+    --text-color-ghost rgba(0, 0, 0, 0.3)
+    --text-color-link #0070f0
+
   / :root
     {default-sizes}
     {default-spaces}
+    {default-colors}
 
   +m('color')
     +m('project-default')
-      --bg-color-default #FFFFFF
-      --bg-color-accent #0056B3
-      --bg-color-border #000000
-      --text-color-primary #000000
-      --text-color-secondary rgba(0, 0, 0, 0.6)
-      --text-color-ghost rgba(0, 0, 0, 0.3)
-      --text-color-link #0070f0
+      {default-colors}
     +m('project-brand')
       --bg-color-default #0070f0
       --bg-color-accent #FFFFFF
@@ -73,12 +77,12 @@
 
   +m('size', 'default')
     {default-sizes}
-  
+
   +m('space', 'default')
     {default-spaces}
-     
+
   +m('gap', 'small')
     --gap var(--space-xxxl)
-  
+
   / *
     box-sizing border-box
