@@ -12,9 +12,10 @@
     // Close to real text behavior implementation
     display inline-block
     overflow hidden
-    letter-spacing -2px
     &::after
-      content '██████████████████████████████████'
+      content '█'
+      transform scaleX(100)
+      display inline-block
     +with-bm('size', 's')
       +m('width', 's') { width 20px }
       +m('width', 'm') { width 48px }
