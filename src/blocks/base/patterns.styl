@@ -2,10 +2,12 @@
   mods('border', 'all')
   mods('view', 'default', 'bg-')
   +e('content')
+    display flex
     mods('distribute', 'center')
     mods('vertical-align', 'center')
     mods('space-a', 'm' 'xl' 'l' 'xxl')
   +e('footer')
+    display flex
     mods('distribute', 'between' 'center' 'right')
     mods('vertical-align', 'center' 'top' 'bottom')
     mods('space-a', 'm' 'l' 'xl' 'xxl')
@@ -14,6 +16,9 @@
   mods('border', 'all')
   mods('view', 'default', 'bg-')
   +e('item')
+    display flex
+    flex-wrap wrap
+    width 100%
     mods('border', 'bottom')
     mods('distribute', 'between')
     mods('vertical-align', 'center')
@@ -38,9 +43,12 @@
   // (by defenition, it's column aligned)
   +e('content')
     flex-grow 1
-    mods('distribute', 'default' 'between' 'center')
+    display flex
+    flex-direction column
+    mods('distribute', 'default' 'between' 'center', 'column-')
     mods('space-a', 'xl' 'xxl')
   +e('action')
+    display flex
     mods('distribute', 'default' 'between' 'center')
     mods('space-a', 'xl' 'xxl')
 
@@ -48,6 +56,7 @@
   mods('border', 'all')
   mods('view', 'default', 'bg-')
   +e('item')
+    display flex
     mods('border', 'bottom' 'top')
     mods('distribute', 'between')
     mods('vertical-align', 'center')
