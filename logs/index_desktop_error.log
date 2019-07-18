@@ -1,0 +1,11 @@
+TypeError: mix is not iterable
+    at getClassesFromBEMJSON (webpack-internal:///./static/sms-system/template-engine.js:32:30)
+    at parseBEMJSONContent (webpack-internal:///./static/sms-system/template-engine.js:26:19)
+    at eval (webpack-internal:///./static/sms-system/template-engine.js:19:15)
+    at Array.map (<anonymous>)
+    at parseBEMJSONContent (webpack-internal:///./static/sms-system/template-engine.js:18:60)
+    at parseBEMJSONContent (webpack-internal:///./static/sms-system/template-engine.js:25:20)
+    at eval (webpack-internal:///./static/sms-system/template-engine.js:19:15)
+    at Array.map (<anonymous>)
+    at parseBEMJSONContent (webpack-internal:///./static/sms-system/template-engine.js:18:60)
+    at parseBEMJSONContent (webpack-internal:///./static/sms-system/template-engine.js:25:20)
