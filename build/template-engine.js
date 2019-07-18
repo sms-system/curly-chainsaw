@@ -1,7 +1,12 @@
 // WARNING!! Not for production use !!
 // Has not XSS prevention, not optimized
 
-import config from '../config.json'
+const config = {
+  "BEM_SEPARATORS": {
+    "ELEM": "__",
+    "MOD": "_"
+  }
+}
 
 const ELEM_SEPARATOR = config.BEM_SEPARATORS.ELEM
 const MOD_SEPARATOR = config.BEM_SEPARATORS.MOD
