@@ -17,12 +17,14 @@ const parseBEMJSONContent = (BEMJSONContent, ctxBlock) => {
   if (Array.isArray(BEMJSONContent)) return BEMJSONContent.map(
     (node) => parseBEMJSONContent(node, ctxBlock)
   ).join('')
-
-  let { block, content } = BEMJSONContent
+  if (!BEMJSONContent || !BEMJSONContent.block && !ctxBlock) return ''
+  let { block, elem, mods, elemMods, content } = BEMJSONContent
+  if (elem) { mods = {} } else { elemMods = {} }
+  if (!block && !elem && (!mods || Object.keys(mods).length === 0)) return ''
   if (!block) { block = ctxBlock }
 
   const innerTpl = parseBEMJSONContent(content, block)
-  const classes = getClassesFromBEMJSON({ ...BEMJSONContent, block })
+  const classes = getClassesFromBEMJSON({ ...BEMJSONContent, mods, elemMods, block })
   const classesChunk = classes.length? ` class="${classes.join(' ')}"` : ''
   return `<div${classesChunk}>${innerTpl}</div>`
 }
@@ -32,10 +34,7 @@ function getClassesFromBEMJSON ({ mix = [], ...props }) {
     let baseClass = block
     if (!block) return
     if (elem) {
-      mods = {}
       baseClass += ELEM_SEPARATOR + elem
-    } else {
-      elemMods = {}
     }
     classes.push(baseClass)
 
