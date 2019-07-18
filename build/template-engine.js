@@ -1,7 +1,8 @@
 // WARNING!! Not for production use !!
 // Has not XSS prevention, not optimized
 
-const config = require('../config.json')
+import config from '../config.json'
+
 const ELEM_SEPARATOR = config.BEM_SEPARATORS.ELEM
 const MOD_SEPARATOR = config.BEM_SEPARATORS.MOD
 
