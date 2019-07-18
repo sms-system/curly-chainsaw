@@ -1,13 +1,24 @@
+flex-column =
+  display flex
+  flex-direction column
+
+flex-row =
+  display flex
+  flex-wrap wrap
+  width 100%
+
 .card
+  {flex-column}
   mods('border', 'all')
   mods('view', 'default', 'bg-')
   +e('content')
-    display flex
-    mods('distribute', 'center')
-    mods('vertical-align', 'center')
+    {flex-column}
+    flex-grow 1
+    mods('distribute', 'center', 'column-')
+    mods('vertical-align', 'center', 'column-')
     mods('space-a', 'm' 'xl' 'l' 'xxl')
   +e('footer')
-    display flex
+    {flex-column}
     mods('distribute', 'between' 'center' 'right')
     mods('vertical-align', 'center' 'top' 'bottom')
     mods('space-a', 'm' 'l' 'xl' 'xxl')
@@ -16,9 +27,7 @@
   mods('border', 'all')
   mods('view', 'default', 'bg-')
   +e('item')
-    display flex
-    flex-wrap wrap
-    width 100%
+    {flex-row}
     mods('border', 'bottom')
     mods('distribute', 'between')
     mods('vertical-align', 'center')
@@ -35,20 +44,18 @@
   e('footer')
 
 .informer
-  display flex
-  flex-direction column
+  {flex-column}
   mods('border', 'all')
   mods('view', 'default', 'bg-')
   // Strange inform distribute values, especially between.
   // (by defenition, it's column aligned)
   +e('content')
     flex-grow 1
-    display flex
-    flex-direction column
+    {flex-column}
     mods('distribute', 'default' 'between' 'center', 'column-')
     mods('space-a', 'xl' 'xxl')
   +e('action')
-    display flex
+    {flex-row}
     mods('distribute', 'default' 'between' 'center')
     mods('space-a', 'xl' 'xxl')
 
@@ -56,7 +63,7 @@
   mods('border', 'all')
   mods('view', 'default', 'bg-')
   +e('item')
-    display flex
+    {flex-row}
     mods('border', 'bottom' 'top')
     mods('distribute', 'between')
     mods('vertical-align', 'center')
