@@ -751,19 +751,8 @@
   width: auto;
   flex-grow: 1;
 }
-.payment .button {
-  width: 200px;
-}
 .warning {
   min-height: 335px;
-  --bg-color-default: #f90;
-  --bg-color-accent: #fff;
-  --bg-color-border: #fff;
-  --text-color-primary: #fff;
-  --text-color-secondary: rgba(255,255,255,0.6);
-  --text-color-ghost: rgba(255,255,255,0.3);
-  --text-color-link: #fff;
-  background-color: var(--bg-color-default);
 }
 .warning__content .placeholder {
   margin: var(--space-m);
