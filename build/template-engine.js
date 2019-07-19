@@ -18,18 +18,27 @@ const parseBEMJSONContent = (BEMJSONContent, ctxBlock) => {
     (node) => parseBEMJSONContent(node, ctxBlock)
   ).join('')
   if (!BEMJSONContent || !BEMJSONContent.block && !ctxBlock) return ''
-  let { block, elem, mods, elemMods, content } = BEMJSONContent
-  if (elem) { mods = {} } else { elemMods = {} }
-  if (!block && !elem && (!mods || Object.keys(mods).length === 0)) return ''
-  if (!block) { block = ctxBlock }
-
-  const innerTpl = parseBEMJSONContent(content, block)
-  const classes = getClassesFromBEMJSON({ ...BEMJSONContent, mods, elemMods, block })
-  const classesChunk = classes.length? ` class="${classes.join(' ')}"` : ''
-  return `<div${classesChunk}>${innerTpl}</div>`
+  try {
+    let { block, elem, mods, elemMods, content } = BEMJSONContent
+    if (elem) { mods = {} } else { elemMods = {} }
+    if (!block && !elem && (!mods || Object.keys(mods).length === 0)) return ''
+    if (!block) { block = ctxBlock }
+    const innerTpl = parseBEMJSONContent(content, block)
+    const classes = getClassesFromBEMJSON({ ...BEMJSONContent, mods, elemMods, block })
+    const classesChunk = classes.length? ` class="${classes.join(' ')}"` : ''
+    return `<div${classesChunk}>${innerTpl}</div>`
+  } catch (err) {
+    console.log(1, BEMJSONContent)
+    console.error(1, BEMJSONContent)
+    throw BEMJSONContent
+  }
 }
 
 function getClassesFromBEMJSON ({ mix = [], ...props }) {
+  // TypeError: mix is not iterable, but it is array by spec
+  // (https://github.com/yndx-shri-reviewer/task-1/blob/master/TEMPLATER.md)
+  if (!mix || typeof mix !== 'object') { mix = [] }
+  if (!Array.isArray(mix)) { mix = [mix] }
   const classes = [props, ...mix].reduce((classes, { block, elem, mods, elemMods }) => {
     let baseClass = block
     if (!block) return
