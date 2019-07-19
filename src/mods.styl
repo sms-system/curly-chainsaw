@@ -56,9 +56,9 @@ mods--bg-from-text-color-view(color)
 
 mods--text-view(color)
   color cssvar('text-color-'+color)
-  +e('word')
-    &::after
-      background-color @color
+  // +e('word')
+  //   &::after
+  //     background-color @color
 
 // -- ALIGNMENT --
 
@@ -137,9 +137,9 @@ mods--size(size)
   +e('word')
     font-size cssvar('text-size-'+size)
     line-height cssvar('line-height-'+size)
-    height @line-height
-    &::after
-      height @font-size
+    // height @line-height
+    // &::after
+    //   height @font-size
 
 // --- BORDER ---
 

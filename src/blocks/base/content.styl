@@ -9,14 +9,12 @@
   +m('type', 'p') { margin 15px 0 21px }
   mods('view', 'primary' 'secondary' 'ghost' 'link', 'text-')
   +e('word')
-    // Close to real text behavior implementation
     display inline-block
     overflow hidden
     &::after
-      content ''
-      display block
-      position relative
-      top 30%
+      content '|'
+      display inline-block
+      transform scaleX(1000)
     +with-bm('size', 's')
       +m('width', 's') { width 20px }
       +m('width', 'm') { width 48px }
@@ -69,6 +67,7 @@
 
 .input
   width 100%
+  cursor text
   mixmod('border', 'all')
   +m('size', 's') { height 24px }
   +m('size', 'm') { height 32px }
