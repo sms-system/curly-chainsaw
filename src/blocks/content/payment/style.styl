@@ -1,2 +1,10 @@
 .payment
   border-width 3px
+
+  // --- FIXES ---
+  +b('form', 'item')
+    &:last-child
+      margin-bottom 0
+    .input
+      width auto
+      flex-grow 1

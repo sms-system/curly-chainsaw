@@ -1,3 +1,11 @@
+b(name, elemName=null)
+  .{name}
+    if typeof(elemName) is 'null'
+      {block}
+    else
+      +e(elemName)
+        {block}
+
 e(name)
   if called-from[0] in ('mod' 'm')
     & ^[0]{BEM_SEPARATORS-ELEM}{name}
