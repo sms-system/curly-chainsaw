@@ -19,10 +19,14 @@ m(name, value=null)
   &{BEM_SEPARATORS-MOD}{name}
     {block}
 
-with-bm(name, value=null)
-  name = value ? name + BEM_SEPARATORS-MOD + value : name
-  ^[0]{BEM_SEPARATORS-MOD}{name} &
-    {block}
+with-bm(modName, value=null, blockName=null)
+  modName = value ? modName + BEM_SEPARATORS-MOD + value : modName
+  if blockName is null
+    ^[0]{BEM_SEPARATORS-MOD}{modName} &
+      {block}
+  else
+    .{blockName}{BEM_SEPARATORS-MOD}{modName} &
+      {block}
 
 mods(name, values, search-prefix='')
   for value in values

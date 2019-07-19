@@ -75,10 +75,23 @@
 
 .image
   width 100%
-  background-image embedurl('assets/image-placeholder-primary.svg', 'utf8')
+  mixmod('border', 'all')
+  mixmod('view', 'default', 'bg-')
   background-position center
   background-repeat no-repeat
-  mixmod('border', 'all')
+
+  primary-placeholder =
+    background-image embedurl('assets/image-placeholder-primary.svg', 'utf8')
+  inverse-placeholder =
+    background-image embedurl('assets/image-placeholder-inverse.svg', 'utf8')
+
+  +with-bm('color', 'project-default', 'theme')
+    {primary-placeholder}
+  +with-bm('color', 'project-inverse', 'theme')
+    {inverse-placeholder}
+  +with-bm('color', 'project-brand', 'theme')
+    {inverse-placeholder}
+
   +m('size', 's') { height 24px }
   +m('size', 'm') { height 32px }
   +m('size', 'l') { height 42px }

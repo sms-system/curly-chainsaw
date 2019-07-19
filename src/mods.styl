@@ -1,6 +1,3 @@
-:root
-  --border-width 3px
-
 // --- COLOR ---
 
 mods--color--project-default =
@@ -146,24 +143,27 @@ mods--size--xxl()
       height var(--text-size-xxl)
       margin-top 9px
 
+mods--size--s()
+  +e('word')
+    height var(--line-height-s)
+    &::after
+      height var(--text-size-s)
+      margin-top 7px
+
 // --- BORDER ---
 
-border-mix =
-  border-width var(--border-width)
-  border-color var(--bg-color-border)
-
 mods--border--all =
-  {border-mix}
+  border-color var(--bg-color-border)
   border-style solid
 
 mods--border--bottom =
-  {border-mix}
+  border-color var(--bg-color-border)
   border-bottom-style solid
   &:last-child
     border-bottom-style none
 
 mods--border--top =
-  {border-mix}
+  border-color var(--bg-color-border)
   border-top-style solid
   &:first-child
     border-top-style none
