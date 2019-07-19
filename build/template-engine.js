@@ -30,7 +30,7 @@ const parseBEMJSONContent = (BEMJSONContent, ctxBlock) => {
   } catch (err) {
     console.log(1, BEMJSONContent)
     console.error(1, BEMJSONContent)
-    throw BEMJSONContent
+    return 'ERR'
   }
 }
 
@@ -59,6 +59,5 @@ function getClassesFromBEMJSON ({ mix = [], ...props }) {
 }
 
 export default function (obj) {
-  throw obj
   return parseBEMJSONContent(obj)
 }
