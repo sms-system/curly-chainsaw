@@ -717,6 +717,7 @@
 }
 .input {
   width: 100%;
+  cursor: text;
   border-width: var(--border-width);
   border-color: var(--bg-color-border);
   border-style: solid;
@@ -779,6 +780,7 @@
   --text-color-secondary: rgba(255,255,255,0.6);
   --text-color-ghost: rgba(255,255,255,0.3);
   --text-color-link: #fff;
+  background-color: var(--bg-color-default);
 }
 .warning__content .placeholder {
   margin: var(--space-m);
