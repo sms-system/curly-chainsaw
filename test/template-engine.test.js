@@ -52,6 +52,18 @@ test('Simple block with mods', () => {
   )
 })
 
+test('Block mixes', () => {
+  expect(templateEngine({
+    block: 'my-block',
+    mix: [
+        {block: 'other-block', mods: {'mod-name': 'mod-value'}},
+        {block: 'other-block', elem: 'second-elem', elemMods: {'elem-mod-name': 'elem-mod-value'}}
+    ]
+  })).toBe(
+    '<div class="my-block other-block other-block_mod-name_mod-value other-block__second-elem other-block__second-elem_elem-mod-name_elem-mod-value"></div>'
+  )
+})
+
 test('Complex example', () => {
   expect(templateEngine({
     "block": "form",
