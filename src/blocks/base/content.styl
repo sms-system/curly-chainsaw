@@ -13,9 +13,10 @@
     display inline-block
     overflow hidden
     &::after
-      content '|'
-      transform scaleX(1000)
-      display inline-block
+      content ''
+      display block
+      position relative
+      top 30%
     +with-bm('size', 's')
       +m('width', 's') { width 20px }
       +m('width', 'm') { width 48px }
