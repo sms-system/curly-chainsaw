@@ -13,25 +13,19 @@ const MOD_SEPARATOR = config.BEM_SEPARATORS.MOD
 
 const parseBEMJSONContent = (BEMJSONContent, ctxBlock) => {
   if (typeof BEMJSONContent === 'string') return BEMJSONContent
-  if (typeof BEMJSONContent !== 'object') return ''
+  if (typeof BEMJSONContent !== 'object' || !BEMJSONContent) return ''
   if (Array.isArray(BEMJSONContent)) return BEMJSONContent.map(
     (node) => parseBEMJSONContent(node, ctxBlock)
   ).join('')
-  if (!BEMJSONContent || !BEMJSONContent.block && !ctxBlock) return ''
-  try {
-    let { block, elem, mods, elemMods, content } = BEMJSONContent
-    if (elem) { mods = {} } else { elemMods = {} }
-    if (!block && !elem && (!mods || Object.keys(mods).length === 0)) return ''
-    if (!block) { block = ctxBlock }
-    const innerTpl = parseBEMJSONContent(content, block)
-    const classes = getClassesFromBEMJSON({ ...BEMJSONContent, mods, elemMods, block })
-    const classesChunk = classes.length? ` class="${classes.join(' ')}"` : ''
-    return `<div${classesChunk}>${innerTpl}</div>`
-  } catch (err) {
-    console.log(1, BEMJSONContent)
-    console.error(1, BEMJSONContent)
-    return 'ERR'
-  }
+  if (!BEMJSONContent.block && !ctxBlock) return ''
+  let { block, elem, mods, elemMods, content } = BEMJSONContent
+  if (elem) { mods = {} } else { elemMods = {} }
+  if (!block && !elem && (!mods || Object.keys(mods).length === 0)) return ''
+  if (!block) { block = ctxBlock }
+  const innerTpl = parseBEMJSONContent(content, block)
+  const classes = getClassesFromBEMJSON({ ...BEMJSONContent, mods, elemMods, block })
+  const classesChunk = classes.length? ` class="${classes.join(' ')}"` : ''
+  return `<div${classesChunk}>${innerTpl}</div>`
 }
 
 function getClassesFromBEMJSON ({ mix = [], ...props }) {
