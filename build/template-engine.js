@@ -30,6 +30,10 @@ const parseBEMJSONContent = (BEMJSONContent, ctxBlock) => {
 }
 
 function getClassesFromBEMJSON ({ mix = [], ...props }) {
+  // TypeError: mix is not iterable, but it is array by spec
+  // (https://github.com/yndx-shri-reviewer/task-1/blob/master/TEMPLATER.md)
+  if (!mix || typeof mix !== 'object') { mix = [] }
+  if (!Array.isArray(mix)) { mix = [mix] }
   const classes = [props, ...mix].reduce((classes, { block, elem, mods, elemMods }) => {
     let baseClass = block
     if (!block) return
@@ -50,5 +54,6 @@ function getClassesFromBEMJSON ({ mix = [], ...props }) {
 }
 
 export default function (obj) {
+  throw obj
   return parseBEMJSONContent(obj)
 }

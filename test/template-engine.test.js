@@ -51,3 +51,25 @@ test('Simple block with mods', () => {
     '<div class="foo foo_bar_baz foo_fuzz"></div>'
   )
 })
+
+test('Complex example', () => {
+  expect(templateEngine({
+    "block": "form",
+    "content": [
+      {
+        "block": "form",
+        "elem": "label",
+        "content": {
+          "block": "text",
+          "mods": { "size": "xl" }
+        }
+      },
+      {
+        "block": "input",
+        "mods": { "size": "xxl" }
+      }
+    ]
+})).toBe(
+    '<div class="form"><div class="form__label"><div class="text text_size_xl"></div></div><div class="input input_size_xxl"></div></div>'
+  )
+})
