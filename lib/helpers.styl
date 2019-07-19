@@ -31,13 +31,16 @@ mods(name, values, search-prefix='')
 
 mixmod(name, value, search-prefix='')
   search-name = search-prefix + name
-  mod = lookup('mods--'+search-name)
-  if typeof(mod) is 'function'
-    mod(value)
-  else
-    mod = lookup('mods--'+search-name+'--'+value)
-    if typeof(mod) is 'null'
+  mod = lookup('mods--'+search-name+'--'+value)
+  if typeof(mod) is 'null'
+    mod = lookup('mods--'+search-name)
+    if typeof(mod) is 'function'
+      mod(value)
+    else
       warn('MOD: "'+ search-name + '", VALUE: "' + value + '" is missing')
+  else
+    if typeof(mod) is 'function'
+      mod(value)
     else
       {mod}
 
