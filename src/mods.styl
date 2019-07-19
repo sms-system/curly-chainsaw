@@ -1,6 +1,65 @@
 :root
   --border-width 3px
 
+// --- COLOR ---
+
+mods--color--project-default =
+  --bg-color-default #FFFFFF
+  --bg-color-accent #0056B3
+  --bg-color-border #000000
+  --text-color-primary #000000
+  --text-color-secondary rgba(0, 0, 0, 0.6)
+  --text-color-ghost rgba(0, 0, 0, 0.3)
+  --text-color-link #0070f0
+
+mods--color--project-brand =
+  --bg-color-default #0070f0
+  --bg-color-accent #FFFFFF
+  --bg-color-border #FFFFFF
+  --text-color-primary #FFFFFF
+  --text-color-secondary rgba(255, 255, 255, 0.6)
+  --text-color-ghost rgba(255, 255, 255, 0.3)
+  --text-color-link #FFFFFF
+
+mods--color--project-inverse =
+  --bg-color-default #000000
+  --bg-color-accent #FFFFFF
+  --bg-color-border #FFFFFF
+  --text-color-primary #FFFFFF
+  --text-color-secondary rgba(255, 255, 255, 0.6)
+  --text-color-ghost rgba(255, 255, 255, 0.3)
+  --text-color-link #0070f0
+
+mods--color--project-warning =
+  --bg-color-default #FF9900
+  --bg-color-accent #FFFFFF
+  --bg-color-border #FFFFFF
+  --text-color-primary #FFFFFF
+  --text-color-secondary rgba(255, 255, 255, 0.6)
+  --text-color-ghost rgba(255, 255, 255, 0.3)
+  --text-color-link #FFF
+
+mods--color--megafon-brand =
+  --bg-color-default #1FA55D
+  --bg-color-accent #FFFFFF
+  --bg-color-border #FFFFFF
+  --text-color-primary #FFFFFF
+  --text-color-secondary rgba(255, 255, 255, 0.6)
+  --text-color-ghost rgba(255, 255, 255, 0.3)
+  --text-color-link #FFF
+
+mods--bg-view(color)
+  background-color cssvar('bg-color-'+color)
+
+mods--bg-from-text-color-view(color)
+  background-color cssvar('text-color-'+color)
+
+mods--text-view(color)
+  color cssvar('text-color-'+color)
+  +e('word')
+    &::after
+      background-color @color
+
 // -- ALIGNMENT --
 
 mods--align--center =
@@ -126,17 +185,3 @@ mods--row-gap--half =
 
 mods--m-col(count)
   grid-column span count
-
-// --- COLOR ---
-
-mods--bg-view(color)
-  background-color cssvar('bg-color-'+color)
-
-mods--bg-from-text-color-view(color)
-  background-color cssvar('text-color-'+color)
-
-mods--text-view(color)
-  color cssvar('text-color-'+color)
-  +e('word')
-    &::after
-      background-color @color

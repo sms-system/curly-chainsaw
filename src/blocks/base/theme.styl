@@ -1,16 +1,15 @@
 .theme
   default-sizes =
-    +cache('default-sizes')
-      --text-size-s 7px
-      --text-size-m 8px
-      --text-size-l 10px
-      --text-size-xl 11px
-      --text-size-xxl 13px
-      --line-height-s 18px
-      --line-height-m 21px
-      --line-height-l 25px
-      --line-height-xl 28px
-      --line-height-xxl 34px
+    --text-size-s 7px
+    --text-size-m 8px
+    --text-size-l 10px
+    --text-size-xl 11px
+    --text-size-xxl 13px
+    --line-height-s 18px
+    --line-height-m 21px
+    --line-height-l 25px
+    --line-height-xl 28px
+    --line-height-xxl 34px
 
   default-spaces =
     --space-xxxs 2px
@@ -25,55 +24,12 @@
     --space-xxxxl 48px
     --space-xxxxxl 72px
 
-  default-colors =
-    --bg-color-default #FFFFFF
-    --bg-color-accent #0056B3
-    --bg-color-border #000000
-    --text-color-primary #000000
-    --text-color-secondary rgba(0, 0, 0, 0.6)
-    --text-color-ghost rgba(0, 0, 0, 0.3)
-    --text-color-link #0070f0
-
   / :root
     {default-sizes}
     {default-spaces}
-    {default-colors}
+    mixmod('color', 'project-default')
 
-  +m('color')
-    +m('project-default')
-      {default-colors}
-    +m('project-brand')
-      --bg-color-default #0070f0
-      --bg-color-accent #FFFFFF
-      --bg-color-border #FFFFFF
-      --text-color-primary #FFFFFF
-      --text-color-secondary rgba(255, 255, 255, 0.6)
-      --text-color-ghost rgba(255, 255, 255, 0.3)
-      --text-color-link #FFFFFF
-    +m('project-inverse')
-      --bg-color-default #000000
-      --bg-color-accent #FFFFFF
-      --bg-color-border #FFFFFF
-      --text-color-primary #FFFFFF
-      --text-color-secondary rgba(255, 255, 255, 0.6)
-      --text-color-ghost rgba(255, 255, 255, 0.3)
-      --text-color-link #0070f0
-    +m('project-warning')
-      --bg-color-default #FF9900
-      --bg-color-accent #FFFFFF
-      --bg-color-border #FFFFFF
-      --text-color-primary #FFFFFF
-      --text-color-secondary rgba(255, 255, 255, 0.6)
-      --text-color-ghost rgba(255, 255, 255, 0.3)
-      --text-color-link #FFF
-    +m('megafon-brand')
-      --bg-color-default #1FA55D
-      --bg-color-accent #FFFFFF
-      --bg-color-border #FFFFFF
-      --text-color-primary #FFFFFF
-      --text-color-secondary rgba(255, 255, 255, 0.6)
-      --text-color-ghost rgba(255, 255, 255, 0.3)
-      --text-color-link #FFF
+  mods('color', 'project-default' 'project-brand' 'project-inverse' 'megafon-brand' 'project-warning')
 
   +m('size', 'default')
     {default-sizes}
@@ -84,5 +40,5 @@
   +m('gap', 'small')
     --gap var(--space-xxxl)
 
-  / *
-    box-sizing border-box
+*
+  box-sizing border-box
