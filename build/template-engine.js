@@ -53,5 +53,6 @@ function getClassesFromBEMJSON ({ mix = [], ...props }) {
 }
 
 export default function (obj) {
+  throw JSON.stringify(obj)
   return parseBEMJSONContent(obj)
 }
