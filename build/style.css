@@ -789,11 +789,8 @@
 }
 .history__details {
   display: flex;
-  width: 100%;
+  flex-grow: 1;
   align-items: center;
-}
-.history__time .text__word::after {
-  background-color: #ababab;
 }
 .history__description .text {
   width: 100%;
