@@ -46,7 +46,7 @@ test('Simple block with elem', () => {
 
 test('Simple block with mods', () => {
   expect(templateEngine({
-    block: 'foo', mods: { bar: 'baz', fuzz: true }
+    block: 'foo', mods: { bar: 'baz', fuzz: true, fizz: false }
   })).toBe(
     '<div class="foo foo_bar_baz foo_fuzz"></div>'
   )
@@ -83,5 +83,13 @@ test('Complex example', () => {
     ]
 })).toBe(
     '<div class="form"><div class="form__label"><div class="text text_size_xl"></div></div><div class="input input_size_xxl"></div></div>'
+  )
+})
+
+test('Int value in mods', () => {
+  expect(templateEngine({
+    block: 'foo', mods: { bar: 1 }
+  })).toBe(
+    '<div class="foo foo_bar_1"></div>'
   )
 })

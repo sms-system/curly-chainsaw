@@ -45,14 +45,14 @@ function getClassesFromBEMJSON ({ mix = [], ...props }) {
     for(let mod in postfixes) {
       const value = postfixes[mod]
       if (!value) continue
-      classes.push(baseClass + MOD_SEPARATOR + mod + (typeof value === 'string'? MOD_SEPARATOR + value : ''))
+      classes.push(baseClass + MOD_SEPARATOR + mod + (typeof value === 'boolean'? '' : MOD_SEPARATOR + value))
     }
     return classes
   }, [])
   return classes
 }
 
-export default function (obj) {
-  throw JSON.stringify(obj)
-  return parseBEMJSONContent(obj)
-}
+module.exports = parseBEMJSONContent
+// export default function (obj) {
+//   return parseBEMJSONContent(obj)
+// }
