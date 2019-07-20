@@ -1,0 +1,2 @@
+TypeError: Cannot read property 'classList' of undefined
+    at HTMLDocument.eval (webpack-internal:///./static/sms-system/script.js:25:30)
