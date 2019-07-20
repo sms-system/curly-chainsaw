@@ -1,5 +1,8 @@
 .theme
-  default-sizes =
+
+  mods('color', 'project-default' 'project-brand' 'project-inverse' 'megafon-brand' 'project-warning')
+
+  +m('size', 'default')
     --text-size-s 7px
     --text-size-m 8px
     --text-size-l 10px
@@ -11,7 +14,7 @@
     --line-height-xl 28px
     --line-height-xxl 34px
 
-  default-spaces =
+  +m('space', 'default')
     --space-xxxs 2px
     --space-xxs 4px
     --space-xs 8px
@@ -24,21 +27,11 @@
     --space-xxxxl 48px
     --space-xxxxxl 72px
 
-  / :root
-    {default-sizes}
-    {default-spaces}
-    mixmod('color', 'project-default')
-
-  mods('color', 'project-default' 'project-brand' 'project-inverse' 'megafon-brand' 'project-warning')
-
-  +m('size', 'default')
-    {default-sizes}
-
-  +m('space', 'default')
-    {default-spaces}
-
   +m('gap', 'small')
     --gap var(--space-xxxl)
+
+  / .page
+    mixmod('view', 'default', 'bg-')
 
 *
   box-sizing border-box
