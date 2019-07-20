@@ -3,3 +3,12 @@
   border-width 3px
   .image
     height 180px
+  +e('page-button')
+    mixmod('view', 'primary', 'bg-from-text-color-')
+    width 8px
+    height 8px
+    margin 0 calc(var(--space-xs) / 2)
+  +e('navigation')
+    margin-top var(--space-s)
+    display flex
+    mixmod('distribute', 'center')

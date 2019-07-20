@@ -63,8 +63,8 @@ mods--text-view(color)
 // -- ALIGNMENT --
 
 mods--align--center =
-  margin-left 0
-  margin-right 0
+  margin-left auto
+  margin-right auto
 
 mods--distribute--default =
   justify-content flex-start
@@ -188,4 +188,4 @@ mods--row-gap--half =
   grid-row-gap calc(var(--gap) / 2)
 
 mods--m-col(count)
-  grid-column span count
+  grid-column auto / span count

@@ -64,6 +64,10 @@ flex-row =
   mods('view', 'default', 'bg-')
   +e('item')
     {flex-row}
+    &:first-child
+      margin-top 0
+    &:last-child
+      margin-bottom 0
     mods('border', 'bottom' 'top')
     mods('distribute', 'between')
     mods('vertical-align', 'center')

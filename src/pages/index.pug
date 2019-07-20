@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    link(rel='stylesheet' href='../style.styl')
+    style body { margin: 0 }
+  body
+    script(src="../../build/script.js")
+    .layout.theme_gap_small
+      .layout__container.layout__container_size_m.layout__container_align_center
+        .section.section_indent-b_xxl
+          .grid.grid.grid_m-columns_10.grid_col-gap_full.grid_row-gap_full
+            include:tpl(grid__fraction grid__fraction_m-col_5) ../blocks/content/payment/block.tpl
+            include:tpl(grid__fraction grid__fraction_m-col_5) ../blocks/content/warning/block.tpl
+        .section.section_indent-b_xxl
+          .grid.grid.grid_m-columns_10.grid_col-gap_half.grid_row-gap_full
+            include:tpl(grid__fraction grid__fraction_m-col_2) ../blocks/content/product/block.tpl
+            include:tpl(grid__fraction grid__fraction_m-col_2) ../blocks/content/product/block.tpl
+            include:tpl(grid__fraction grid__fraction_m-col_2) ../blocks/content/product/block.tpl
+            include:tpl(grid__fraction grid__fraction_m-col_2) ../blocks/content/product/block.tpl
+            include:tpl(grid__fraction grid__fraction_m-col_2) ../blocks/content/product/block.tpl
+        .section.section_indent-b_xxl
+          .grid.grid.grid_m-columns_12.grid_col-gap_full.grid_row-gap_full
+            include:tpl(grid__fraction grid__fraction_m-col_8) ../blocks/content/history/block.tpl
+            include:tpl(grid__fraction grid__fraction_m-col_4) ../blocks/content/commercial/block.tpl
