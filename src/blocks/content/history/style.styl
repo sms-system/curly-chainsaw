@@ -1,0 +1,21 @@
+.history
+  border-width 3px
+  // -- FIXES ---
+  +e('time')
+    {flex-column}
+    mixmod('vertical-align', 'center', 'column-')
+
+  +e('details')
+    display flex
+    width 100%
+    mixmod('vertical-align', 'center')
+
+  +e('time')
+    words-color(#ababab)
+
+  +e('description')
+    .text
+      width 100%
+
+  +e('hide')
+    display none

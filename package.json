@@ -6,6 +6,11 @@
     "build": "stylus src/style.styl -o build/style.css",
     "test": "jest"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build && git add build/."
+    }
+  },
   "repository": "git@github.com:sms-system/curly-chainsaw.git",
   "author": "Serge Smirnov <serge.roberval@gmail.com>",
   "license": "MIT",
@@ -13,6 +18,7 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "babel-jest": "^24.8.0",
+    "husky": "^3.0.1",
     "jest": "^24.8.0",
     "parcel": "^1.12.3",
     "pug": "^2.0.4",

@@ -51,10 +51,14 @@ mods--bg-view(color)
 mods--bg-from-text-color-view(color)
   background-color cssvar('text-color-'+color)
 
+words-color(color)
+  .text
+    +e('word')
+      &::after
+        background-color color
+
 mods--text-view(color)
-  +e('word')
-    &::after
-      background-color cssvar('text-color-'+color)
+  words-color(cssvar('text-color-'+color))
 
 // -- ALIGNMENT --
 
@@ -128,27 +132,22 @@ mods--indent-l(size)
   margin-left cssvar('space-'+size)
 
 // --- SIZE ---
+words-size(size, marginTop)
+  .text
+    +e('word')
+      height cssvar('line-height-'+size)
+      &::after
+        height cssvar('text-size-'+size)
+        margin-top marginTop
 
 mods--size(size)
-  +e('word')
-    height cssvar('line-height-'+size)
-    &::after
-      height cssvar('text-size-'+size)
-      margin-top 8px
+  words-size(size, 8px)
 
 mods--size--xxl()
-  +e('word')
-    height var(--line-height-xxl)
-    &::after
-      height var(--text-size-xxl)
-      margin-top 9px
+  words-size('xxl', 9px)
 
 mods--size--s()
-  +e('word')
-    height var(--line-height-s)
-    &::after
-      height var(--text-size-s)
-      margin-top 7px
+  words-size('s', 7px)
 
 // --- BORDER ---
 

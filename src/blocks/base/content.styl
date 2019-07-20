@@ -78,12 +78,11 @@
   mixmod('border', 'all')
   background-position center
   background-repeat no-repeat
+  mixmod('view', 'default', 'bg-')
 
   primary-placeholder =
-    background-color #fff
     background-image embedurl('assets/image-placeholder-primary.svg', 'utf8')
   inverse-placeholder =
-    background-color #000
     background-image embedurl('assets/image-placeholder-inverse.svg', 'utf8')
 
   +with-bm('color', 'project-default', 'theme')

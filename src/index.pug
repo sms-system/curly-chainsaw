@@ -2,7 +2,10 @@ doctype html
 html
   head
     link(rel='stylesheet' href='style.styl')
+    style body { margin: 0 }
   body
+    include:tpl blocks/content/commercial/block.tpl
+    include:tpl blocks/content/history/block.tpl
     include:tpl blocks/content/product/block.tpl
     include:tpl blocks/content/warning/block.tpl
     include:tpl blocks/content/payment/block.tpl

@@ -472,6 +472,11 @@
 .list__item_space-a_l {
   padding: var(--space-l);
 }
+.icon-plus {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .icon-plus_vertical-align_center {
   align-items: center;
 }
@@ -712,17 +717,15 @@
   border-style: solid;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: var(--bg-color-default);
 }
 .theme_color_project-default .image {
-  background-color: #fff;
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version=%221.0%22 encoding=%22UTF-8%22?%3E %3Csvg width=%2280px%22 height=%2264px%22 viewBox=%220 0 80 64%22 version=%221.1%22 xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22%3E %3C!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eplaceholder%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cg id=%22Page-1%22 stroke=%22none%22 stroke-width=%221%22 fill=%22none%22 fill-rule=%22evenodd%22%3E %3Cg id=%22image-placeholder%22 transform=%22translate(-500.000000, -368.000000)%22 fill=%22%23000000%22 fill-rule=%22nonzero%22%3E %3Cg id=%22Group%22 transform=%22translate(500.000000, 368.000000)%22%3E %3Cg id=%22placeholder%22%3E %3Cpath d=%22M32,16 L48,16 L48,8 L56,8 L56,16 L64,16 L64,24 L72,24 L72,32 L80,32 L80,48 L72,48 L72,40 L64,40 L64,48 L56,48 L56,56 L48,56 L48,48 L32,48 L32,56 L24,56 L24,48 L16,48 L16,40 L8,40 L8,48 L0,48 L0,32 L8,32 L8,24 L16,24 L16,16 L24,16 L24,8 L32,8 L32,16 Z M24,32 L32,32 L32,24 L24,24 L24,32 Z M16,0 L24,0 L24,8 L16,8 L16,0 Z M16,56 L24,56 L24,64 L16,64 L16,56 Z M56,32 L56,24 L48,24 L48,32 L56,32 Z M64,0 L64,8 L56,8 L56,0 L64,0 Z M64,56 L64,64 L56,64 L56,56 L64,56 Z%22 id=%22Shape%22%3E%3C/path%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 .theme_color_project-inverse .image {
-  background-color: #000;
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version=%221.0%22 encoding=%22UTF-8%22?%3E %3Csvg width=%2280px%22 height=%2264px%22 viewBox=%220 0 80 64%22 version=%221.1%22 xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22%3E %3C!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eplaceholder%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cg id=%22Page-1%22 stroke=%22none%22 stroke-width=%221%22 fill=%22none%22 fill-rule=%22evenodd%22%3E %3Cg id=%22image-placeholder%22 transform=%22translate(-620.000000, -368.000000)%22 fill=%22%23FFFFFF%22 fill-rule=%22nonzero%22%3E %3Cg id=%22Group%22 transform=%22translate(500.000000, 368.000000)%22%3E %3Cg id=%22placeholder%22 transform=%22translate(120.000000, 0.000000)%22%3E %3Cpath d=%22M32,16 L48,16 L48,8 L56,8 L56,16 L64,16 L64,24 L72,24 L72,32 L80,32 L80,48 L72,48 L72,40 L64,40 L64,48 L56,48 L56,56 L48,56 L48,48 L32,48 L32,56 L24,56 L24,48 L16,48 L16,40 L8,40 L8,48 L0,48 L0,32 L8,32 L8,24 L16,24 L16,16 L24,16 L24,8 L32,8 L32,16 Z M24,32 L32,32 L32,24 L24,24 L24,32 Z M16,0 L24,0 L24,8 L16,8 L16,0 Z M16,56 L24,56 L24,64 L16,64 L16,56 Z M56,32 L56,24 L48,24 L48,32 L56,32 Z M64,0 L64,8 L56,8 L56,0 L64,0 Z M64,56 L64,64 L56,64 L56,56 L64,56 Z%22 id=%22Shape%22%3E%3C/path%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 .theme_color_project-brand .image {
-  background-color: #000;
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version=%221.0%22 encoding=%22UTF-8%22?%3E %3Csvg width=%2280px%22 height=%2264px%22 viewBox=%220 0 80 64%22 version=%221.1%22 xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22%3E %3C!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eplaceholder%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cg id=%22Page-1%22 stroke=%22none%22 stroke-width=%221%22 fill=%22none%22 fill-rule=%22evenodd%22%3E %3Cg id=%22image-placeholder%22 transform=%22translate(-620.000000, -368.000000)%22 fill=%22%23FFFFFF%22 fill-rule=%22nonzero%22%3E %3Cg id=%22Group%22 transform=%22translate(500.000000, 368.000000)%22%3E %3Cg id=%22placeholder%22 transform=%22translate(120.000000, 0.000000)%22%3E %3Cpath d=%22M32,16 L48,16 L48,8 L56,8 L56,16 L64,16 L64,24 L72,24 L72,32 L80,32 L80,48 L72,48 L72,40 L64,40 L64,48 L56,48 L56,56 L48,56 L48,48 L32,48 L32,56 L24,56 L24,48 L16,48 L16,40 L8,40 L8,48 L0,48 L0,32 L8,32 L8,24 L16,24 L16,16 L24,16 L24,8 L32,8 L32,16 Z M24,32 L32,32 L32,24 L24,24 L24,32 Z M16,0 L24,0 L24,8 L16,8 L16,0 Z M16,56 L24,56 L24,64 L16,64 L16,56 Z M56,32 L56,24 L48,24 L48,32 L56,32 Z M64,0 L64,8 L56,8 L56,0 L64,0 Z M64,56 L64,64 L56,64 L56,56 L64,56 Z%22 id=%22Shape%22%3E%3C/path%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 .image_size_s {
@@ -763,4 +766,33 @@
 }
 .product .image {
   height: 160px;
+}
+.history {
+  border-width: 3px;
+}
+.history__time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.history__details {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.history__time .text__word::after {
+  background-color: #ababab;
+}
+.history__description .text {
+  width: 100%;
+}
+.history__hide {
+  display: none;
+}
+.commercial {
+  min-height: 430px;
+  border-width: 3px;
+}
+.commercial .image {
+  height: 180px;
 }
