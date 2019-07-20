@@ -816,3 +816,38 @@
   display: flex;
   justify-content: center;
 }
+.header {
+  padding: var(--space-xxxl) var(--gap);
+}
+.header__logo {
+  width: 179px;
+  height: 34px;
+  background-color: var(--text-color-primary);
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1144px;
+  margin: 0 auto;
+}
+.onoffswitch {
+  width: 97px;
+  height: 32px;
+  border-width: 2px;
+  position: relative;
+  border-color: var(--bg-color-border);
+  border-style: solid;
+}
+.onoffswitch__button {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.2s;
+  background-color: var(--bg-color-border);
+}
+.onoffswitch_checked .onoffswitch__button {
+  left: 67px;
+}

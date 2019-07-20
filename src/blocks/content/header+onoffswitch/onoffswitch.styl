@@ -1,0 +1,23 @@
+.onoffswitch
+  width = 97px
+  height = 32px
+  border-width = 2px
+  bullet-width = 24px
+  bullet-height = 24px
+  bullet-margins = unit((height - border-width * 2 - bullet-height) / 2, px)
+  width width
+  height height
+  border-width border-width
+  position relative
+  mixmod('border', 'all')
+  +e('button')
+    width bullet-width
+    height bullet-height
+    position absolute
+    top bullet-margins
+    left bullet-margins
+    transition left .2s
+    mixmod('view', 'border', 'bg-')
+  +m('checked')
+    +e('button')
+      left unit(width - border-width * 2 - bullet-margins - bullet-width, px)

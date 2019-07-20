@@ -1,0 +1,12 @@
+.header
+  padding var(--space-xxxl) var(--gap)
+  +e('logo')
+    width 179px
+    height 34px
+    mixmod('view', 'primary', 'bg-from-text-color-')
+  +e('content')
+    display flex
+    mixmod('distribute', 'between')
+    mixmod('vertical-align', 'center')
+    max-width 1144px
+    margin 0 auto
