@@ -152,6 +152,9 @@
 .grid_row-gap_full {
   grid-row-gap: var(--gap);
 }
+.grid__fraction > * {
+  height: 100%;
+}
 .grid__fraction_m-col_2 {
   grid-column: auto/span 2;
 }
