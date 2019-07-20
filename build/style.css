@@ -783,6 +783,19 @@
 .history__hide {
   display: none;
 }
+.history__show {
+  margin-bottom: 4px;
+}
+.history__show .text {
+  position: relative;
+  top: 2px;
+}
+.history .list__item_indent-t_m {
+  margin-top: 16px;
+}
+.history .list__item_indent-t_m:first-child {
+  margin-top: 0;
+}
 .commercial {
   min-height: 430px;
   border-width: 3px;
