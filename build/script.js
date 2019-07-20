@@ -20,16 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const onoffswitch = document.getElementsByClassName('onoffswitch')[0]
-  const onoffswitchCheckedClassName = 'onoffswitch_checked'
-  let onoffswitchIsChecked = false
-  if (Array.from(onoffswitch.classList).includes(onoffswitchCheckedClassName)) {
-    onoffswitchIsChecked = true
+  if (onoffswitch) {
+    const onoffswitchCheckedClassName = 'onoffswitch_checked'
+    let onoffswitchIsChecked = false
+    if (Array.from(onoffswitch.classList).includes(onoffswitchCheckedClassName)) {
+      onoffswitchIsChecked = true
+    }
+    onoffswitch.addEventListener('click', () => {
+      onoffswitchIsChecked = !onoffswitchIsChecked
+      if (onoffswitchIsChecked) { onoffswitch.classList.add(onoffswitchCheckedClassName) }
+      else { onoffswitch.classList.remove(onoffswitchCheckedClassName) }
+      switchTheme()
+    })
   }
-  onoffswitch.addEventListener('click', () => {
-    onoffswitchIsChecked = !onoffswitchIsChecked
-    if (onoffswitchIsChecked) { onoffswitch.classList.add(onoffswitchCheckedClassName) }
-    else { onoffswitch.classList.remove(onoffswitchCheckedClassName) }
-    switchTheme()
-  })
 
 })
