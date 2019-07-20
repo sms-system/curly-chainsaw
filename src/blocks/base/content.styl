@@ -76,6 +76,7 @@
 .image
   width 100%
   mixmod('border', 'all')
+  border-width 3px
   background-position center
   background-repeat no-repeat
   mixmod('view', 'default', 'bg-')
@@ -91,6 +92,17 @@
     {inverse-placeholder}
   +with-bm('color', 'project-brand', 'theme')
     {inverse-placeholder}
+
+  /.theme
+    +m('color', 'project-default')
+      > .image
+        {primary-placeholder}
+    +m('color', 'project-inverse')
+      > .image
+        {inverse-placeholder}
+    +m('color', 'project-brand')
+      > .image
+        {inverse-placeholder}
 
   +m('size', 's') { height 24px }
   +m('size', 'm') { height 32px }
