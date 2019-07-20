@@ -14,17 +14,26 @@
     .text
       width 100%
 
+  // Hacks for correct dimensions and unfold animation
+
+  +e('transaction')
+    overflow hidden
+    &.is-unfolded ^[0]
+      +e('hide')
+        max-height 100px
+        margin-top 16px
+        top 0
+
   +e('hide')
-    display none
+    max-height 0
+    position relative
+    margin-top 0
+    top 16px
+    transition max-height .2s
 
   +e('show')
+    margin-top 0
     margin-bottom 4px
     .text
       position relative
       top 2px
-
-  +b('list', 'item')
-    +m('indent-t', 'm')
-      margin-top 16px
-      &:first-child
-        margin-top 0

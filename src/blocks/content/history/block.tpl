@@ -1,5 +1,5 @@
 history (list_view_default list_border_all)
-  history__transaction (list__item_border_bottom list__item_space-a_l)
+  history__transaction (list__item_border_bottom list__item_space-a_l e-accordion)
     history__show (e-accordion__short list__item_vertical-align_center list__item_indent-t_m)
       history__details
         history__time
@@ -19,7 +19,7 @@ history (list_view_default list_border_all)
       history__actions (list__item_distribute_between list__item_indent-b_l)
         text (text_view_primary text_size_l)(l)
         text (text_view_primary text_size_l)(m)
-  history__transaction (list__item_border_bottom list__item_space-a_l)
+  history__transaction (list__item_border_bottom list__item_space-a_l e-accordion)
     history__show (e-accordion__short list__item_vertical-align_center list__item_indent-t_m)
       history__details
         history__time
@@ -39,7 +39,7 @@ history (list_view_default list_border_all)
       history__actions (list__item_distribute_between list__item_indent-b_l)
         text (text_view_primary text_size_l)(l)
         text (text_view_primary text_size_l)(m)
-  history__transaction (list__item_border_bottom list__item_space-a_l)
+  history__transaction (list__item_border_bottom list__item_space-a_l e-accordion)
     history__show (e-accordion__short list__item_vertical-align_center list__item_indent-t_m)
       history__details
         history__time
@@ -59,7 +59,7 @@ history (list_view_default list_border_all)
       history__actions (list__item_distribute_between list__item_indent-b_l)
         text (text_view_primary text_size_l)(l)
         text (text_view_primary text_size_l)(m)
-  history__transaction (list__item_border_bottom list__item_space-a_l)
+  history__transaction (list__item_border_bottom list__item_space-a_l e-accordion)
     history__show (e-accordion__short list__item_vertical-align_center list__item_indent-t_m)
       history__details
         history__time

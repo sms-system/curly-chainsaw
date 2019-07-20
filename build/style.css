@@ -125,9 +125,6 @@
 .grid_row-gap_full {
   grid-row-gap: var(--gap);
 }
-.grid__fraction > * {
-  height: 100%;
-}
 .grid__fraction_m-col_2 {
   grid-column: auto/span 2;
 }
@@ -752,6 +749,7 @@
 }
 .warning {
   min-height: 335px;
+  height: 100%;
 }
 .warning__content .placeholder {
   margin: var(--space-m);
@@ -780,21 +778,28 @@
 .history__description .text {
   width: 100%;
 }
+.history__transaction {
+  overflow: hidden;
+}
+.history__transaction.is-unfolded .history__hide {
+  max-height: 100px;
+  margin-top: 16px;
+  top: 0;
+}
 .history__hide {
-  display: none;
+  max-height: 0;
+  position: relative;
+  margin-top: 0;
+  top: 16px;
+  transition: max-height 0.2s;
 }
 .history__show {
+  margin-top: 0;
   margin-bottom: 4px;
 }
 .history__show .text {
   position: relative;
   top: 2px;
-}
-.history .list__item_indent-t_m {
-  margin-top: 16px;
-}
-.history .list__item_indent-t_m:first-child {
-  margin-top: 0;
 }
 .commercial {
   min-height: 430px;
