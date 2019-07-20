@@ -27,6 +27,10 @@ flex-row =
   mods('border', 'all')
   mods('view', 'default', 'bg-')
   +e('item')
+    &:first-child
+      margin-top 0
+    &:last-child
+      margin-bottom 0
     {flex-row}
     mods('border', 'bottom')
     mods('distribute', 'between')

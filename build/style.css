@@ -252,6 +252,12 @@
   flex-wrap: wrap;
   width: 100%;
 }
+.form__item:first-child {
+  margin-top: 0;
+}
+.form__item:last-child {
+  margin-bottom: 0;
+}
 .form__item_border_bottom {
   border-color: var(--bg-color-border);
   border-bottom-style: solid;
@@ -757,14 +763,6 @@
 }
 .payment {
   border-width: 3px;
-  background-color: var(--bg-color-default);
-}
-.payment .form__item:last-child {
-  margin-bottom: 0;
-}
-.payment .form__item .input {
-  width: auto;
-  flex-grow: 1;
 }
 .warning {
   min-height: 335px;
