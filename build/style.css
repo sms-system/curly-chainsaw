@@ -860,3 +860,13 @@
 .onoffswitch_checked .onoffswitch__button {
   left: 67px;
 }
+.footer {
+  padding: var(--space-xxxl) var(--gap);
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1144px;
+  margin: 0 auto;
+}

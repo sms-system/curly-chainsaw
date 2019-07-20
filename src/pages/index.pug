@@ -5,21 +5,23 @@ html
     style body { margin: 0 }
   body
     script(src="../../build/script.js")
-    include:tpl ../blocks/content/header/block.tpl
-    .layout.theme_gap_small
-      .layout__container.layout__container_size_m.layout__container_align_center
-        .section.section_indent-b_xxl
-          .grid.grid.grid_m-columns_10.grid_col-gap_full.grid_row-gap_full
-            .grid__fraction.grid__fraction_m-col_5: include:tpl ../blocks/content/payment/block.tpl
-            .grid__fraction.grid__fraction_m-col_5: include:tpl ../blocks/content/warning/block.tpl
-        .section.section_indent-b_xxl
-          .grid.grid.grid_m-columns_10.grid_col-gap_half.grid_row-gap_full
-            .grid__fraction.grid__fraction_m-col_2: include:tpl ../blocks/content/product/block.tpl
-            .grid__fraction.grid__fraction_m-col_2: include:tpl ../blocks/content/product/block.tpl
-            .grid__fraction.grid__fraction_m-col_2: include:tpl ../blocks/content/product/block.tpl
-            .grid__fraction.grid__fraction_m-col_2: include:tpl ../blocks/content/product/block.tpl
-            .grid__fraction.grid__fraction_m-col_2: include:tpl ../blocks/content/product/block.tpl
-        .section.section_indent-b_xxl
-          .grid.grid.grid_m-columns_12.grid_col-gap_full.grid_row-gap_full
-            .grid__fraction.grid__fraction_m-col_8: include:tpl ../blocks/content/history/block.tpl
-            .grid__fraction.grid__fraction_m-col_4: include:tpl ../blocks/content/commercial/block.tpl
+    .page.theme_gap_small.theme_color_project-default.theme_size_default.theme_space_default
+      include:tpl ../blocks/content/header+onoffswitch/block.tpl
+      .layout
+        .layout__container.layout__container_size_m.layout__container_align_center
+          .section.section_indent-b_xxl
+            .grid.grid.grid_m-columns_10.grid_col-gap_full.grid_row-gap_full
+              .grid__fraction.grid__fraction_m-col_5: include:tpl ../blocks/content/payment/block.tpl
+              .grid__fraction.grid__fraction_m-col_5: include:tpl ../blocks/content/warning/block.tpl
+          .section.section_indent-b_xxl
+            .grid.grid.grid_m-columns_10.grid_col-gap_half.grid_row-gap_full
+              .grid__fraction.grid__fraction_m-col_2: include:tpl ../blocks/content/product/block.tpl
+              .grid__fraction.grid__fraction_m-col_2: include:tpl ../blocks/content/product/block.tpl
+              .grid__fraction.grid__fraction_m-col_2: include:tpl ../blocks/content/product/block.tpl
+              .grid__fraction.grid__fraction_m-col_2: include:tpl ../blocks/content/product/block.tpl
+              .grid__fraction.grid__fraction_m-col_2: include:tpl ../blocks/content/product/block.tpl
+          .section.section_indent-b_xxl
+            .grid.grid.grid_m-columns_12.grid_col-gap_full.grid_row-gap_full
+              .grid__fraction.grid__fraction_m-col_8: include:tpl ../blocks/content/history/block.tpl
+              .grid__fraction.grid__fraction_m-col_4: include:tpl ../blocks/content/commercial/block.tpl
+      include:tpl ../blocks/content/footer/block.tpl
