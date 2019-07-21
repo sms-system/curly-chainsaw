@@ -973,3 +973,16 @@
 .articles__content .text:last-child {
   margin-top: var(--space-xs);
 }
+.offer {
+  min-height: 408px;
+}
+.offer__footer {
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+.offer__name {
+  margin-bottom: var(--space-xs);
+}
+.offer__sale {
+  margin-bottom: var(--space-xs);
+}
