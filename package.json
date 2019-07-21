@@ -2,7 +2,7 @@
   "name": "task-1",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel --no-cache src/pages/index.pug",
+    "start": "parcel --no-cache src/pages/product.pug",
     "build": "stylus src/style.styl -o build/style.css",
     "test": "jest"
   },

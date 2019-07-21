@@ -904,3 +904,17 @@
   max-width: 1144px;
   margin: 0 auto;
 }
+.cover {
+  min-height: 408px;
+  position: relative;
+}
+.cover__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.cover .image {
+  height: 180px;
+  margin-bottom: var(--space-m);
+}
