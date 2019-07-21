@@ -2,26 +2,33 @@
   "name": "task-1",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel --no-cache src/pages/product.pug",
+    "start": "parcel --no-cache src/pages/links-to-pages.pug",
     "build": "stylus src/style.styl -o build/style.css",
-    "test": "jest"
+    "test": "jest",
+    "test:template-engine": "jest test/template-engine.test.js",
+    "test:screenshots": "jest test/screenshots.test.js"
   },
   "husky": {
     "hooks": {
       "pre-commit": "yarn build && git add build/."
     }
   },
+  "jest": {
+    "preset": "jest-puppeteer"
+  },
   "repository": "git@github.com:sms-system/curly-chainsaw.git",
   "author": "Serge Smirnov <serge.roberval@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "babel-jest": "^24.8.0",
     "husky": "^3.0.1",
     "jest": "^24.8.0",
+    "jest-puppeteer": "^4.3.0",
     "parcel": "^1.12.3",
+    "parcel-bundler": "^1.12.3",
+    "pixelmatch": "^5.0.2",
+    "pngjs": "^3.4.0",
     "pug": "^2.0.4",
+    "puppeteer": "^1.18.1",
     "stylus": "^0.54.5",
     "yaml": "^1.6.0"
   }
