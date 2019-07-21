@@ -83,6 +83,7 @@
 }
 * {
   box-sizing: border-box;
+  transform: translateX(-10px);
 }
 .layout__container_align_center {
   margin-left: auto;
@@ -107,6 +108,9 @@
 }
 .layout__container_indent-b_xxxxl {
   margin-bottom: var(--space-xxxxl);
+}
+.layout__container:last-child {
+  margin-bottom: 0;
 }
 .grid {
   display: grid;
