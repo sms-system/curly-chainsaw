@@ -986,3 +986,13 @@
 .offer__sale {
   margin-bottom: var(--space-xs);
 }
+.subscribtion {
+  min-height: 408px;
+}
+.subscribtion__title {
+  margin-bottom: var(--space-xl);
+}
+.subscribtion__footer {
+  padding-top: 0;
+  margin-top: -3px;
+}
