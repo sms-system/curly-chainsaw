@@ -1,0 +1,32 @@
+.collect
+  border-width 3px
+  min-height 380px
+
+  +m('size', 'one-third')
+    +e('done')
+      width unit(100/3, '%')
+  +m('size', 'half')
+    +e('done')
+      width unit(100/2, '%')
+  +m('size', 'two-third')
+    +e('done')
+      width unit(200/3, '%')
+
+  +e('progress')
+    mixmod('border', 'bottom')
+    border-width 3px
+
+  +e('done')
+    height 8px
+    mixmod('view', 'accent', 'bg-')
+    background-color #1a72f2
+
+  .image
+    height 160px
+    border-color var(--bg-color-default)
+
+  +e('footer')
+    flex-grow 1
+    justify-content flex-end
+    .text:first-child
+      mixmod('indent-b', 's')

@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    link(rel='stylesheet' href='../style.styl')
+    style body { margin: 0 }
+  body
+    script(src="../../build/script.js")
+    .page.theme_gap_small.theme_color_project-default.theme_size_default.theme_space_default
+      include:tpl ../content_blocks/header+onoffswitch/block.tpl
+      .layout
+        .layout__container.layout__container_indent-b_xxl.theme.theme_color_project-inverse
+          .layout__container.layout__container_size_m.layout__container_align_center.layout__container_space-v_xxxxxl
+            .grid.grid.grid_m-columns_12.grid_col-gap_half.grid_row-gap_half
+              .grid__fraction.grid__fraction_m-col_3: include:tpl(collect_size_two-third) ../content_blocks/collect/block.tpl
+              .grid__fraction.grid__fraction_m-col_3: include:tpl(collect_size_one-third) ../content_blocks/collect/block.tpl
+              .grid__fraction.grid__fraction_m-col_3: include:tpl(collect_size_half) ../content_blocks/collect/block.tpl
+              .grid__fraction.grid__fraction_m-col_3: include:tpl(collect_size_two-third) ../content_blocks/collect/block.tpl
+      include:tpl ../content_blocks/footer/block.tpl
