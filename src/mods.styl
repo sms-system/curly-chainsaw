@@ -171,6 +171,8 @@ mods--border--top =
 
 mods--m-columns(count)
   grid-template-columns repeat(count, 1fr)
+  @media (max-width: 1144px)
+    grid-template-columns 1fr
 
 mods--col-gap--full =
   grid-column-gap var(--gap)
@@ -188,4 +190,6 @@ mods--row-gap--half =
   grid-row-gap calc(var(--gap) / 2)
 
 mods--m-col(count)
-  grid-column auto / span count
+  grid-column span count
+  @media (max-width: 1144px)
+    grid-column span 1
