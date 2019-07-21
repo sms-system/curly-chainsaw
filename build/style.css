@@ -724,6 +724,7 @@
   cursor: text;
   border-color: var(--bg-color-border);
   border-style: solid;
+  border-color: var();
 }
 .input_size_s {
   height: 24px;
@@ -963,4 +964,12 @@
 }
 .collect__footer .text:first-child {
   margin-bottom: var(--space-s);
+}
+.articles .image {
+  width: 170px;
+  height: 120px;
+  border-color: var(--bg-color-default);
+}
+.articles__content .text:last-child {
+  margin-top: var(--space-xs);
 }
