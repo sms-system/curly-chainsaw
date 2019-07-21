@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    link(rel='stylesheet' href='../style.styl')
+    style body { margin: 0 }
+  body
+    script(src="../../build/script.js")
+    .page.theme_gap_small.theme_color_project-default.theme_size_default.theme_space_default
+      include:tpl ../content_blocks/header+onoffswitch/block.tpl
+      .layout
+        .layout__container.layout__container_size_m.layout__container_align_center.section.section_indent-b_xxxxl
+          .grid.grid.grid_m-columns_12.grid_col-gap_full.grid_row-gap_full
+            .grid__fraction.grid__fraction_m-col_8: include:tpl ../content_blocks/product_page_text.tpl
+            .grid__fraction.grid__fraction_m-col_4: include:tpl ../content_blocks/cover/block.tpl
+        .layout__container.section.section_space-v_xxxxl.theme.theme_color_project-inverse
+          .layout__container.layout__container_size_m.layout__container_align_center
+            .product__title: .text.text_view_primary.text_size_xl.product__title
+              .text__word.text__word_width_l
+              .text__word.text__word_width_l
+            .grid.grid.grid_m-columns_12.grid_col-gap_half.grid_row-gap_half
+              .grid__fraction.grid__fraction_m-col_3: include:tpl ../content_blocks/product/block.tpl
+              .grid__fraction.grid__fraction_m-col_3: include:tpl ../content_blocks/product/block.tpl
+              .grid__fraction.grid__fraction_m-col_3: include:tpl ../content_blocks/product/block.tpl
+              .grid__fraction.grid__fraction_m-col_3: include:tpl ../content_blocks/product/block.tpl
+      include:tpl ../content_blocks/footer/block.tpl
