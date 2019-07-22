@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    link(rel='stylesheet' href='../style.styl')
+    style body { margin: 0 }
+  body
+    script(src="../../build/script.js")
+    .page.theme_gap_small.theme_color_project-default.theme_size_default.theme_space_default
+      include:tpl ../content_blocks/header+onoffswitch/block.tpl
+      .layout
+        .layout__container.layout__container_size_s.layout__container_align_center
+          include:tpl ../content_blocks/content_page_text_1.tpl
+        .layout__container.layout__container_size_m.layout__container_align_center
+          .grid.grid.grid_m-columns_10.grid_col-gap_full.grid_row-gap_full
+            .grid__fraction.grid__fraction_m-col_5: include:tpl ../content_blocks/event/block.tpl
+            .grid__fraction.grid__fraction_m-col_5: include:tpl ../content_blocks/event/block.tpl
+        .layout__container.layout__container_size_s.layout__container_align_center
+          include:tpl ../content_blocks/content_page_text_2.tpl
+      include:tpl ../content_blocks/footer/block.tpl
