@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // Theme switch logic
-
   function switchTheme () {
     const themeAlternates = {
       'theme_color_project-inverse': 'theme_color_project-default',
@@ -34,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
+  // Accordion unfold classes toggle on click
   Array.from(document.getElementsByClassName('e-accordion')).forEach((block) => {
     block.addEventListener('click', (e) => {
       const block = e.path.find((el) => Array.from(el.classList).includes('e-accordion'))
