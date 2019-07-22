@@ -34,9 +34,21 @@ describe('Screenshots tests', () => {
   })
   describe('mobile (600px)', () => {
     test('Index page', async () => {
-      const numDiffPixels = await getMarkupDiffPixelsCount('index_mobile', 'index_mobile')
-      // Small right border and dots missmatches, but yandex autotests accept it
-      expect(numDiffPixels).toBeLessThan(11000)
+      const numDiffPixels = await getMarkupDiffPixelsCount('index', 'index_mobile')
+      // dots missmatches, but yandex autotests accept it
+      expect(numDiffPixels).toBe(352)
+    })
+    test('Product page', async () => {
+      const numDiffPixels = await getMarkupDiffPixelsCount('product', 'product_mobile')
+      expect(numDiffPixels).toBe(0)
+    })
+    test('Collect page', async () => {
+      const numDiffPixels = await getMarkupDiffPixelsCount('collect', 'collect_mobile')
+      expect(numDiffPixels).toBe(0)
+    })
+    test('Content page', async () => {
+      const numDiffPixels = await getMarkupDiffPixelsCount('content', 'content_mobile')
+      expect(numDiffPixels).toBe(0)
     })
   })
 })
