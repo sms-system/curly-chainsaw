@@ -1,17 +1,10 @@
 const getMarkupDiffPixelsCount = require('./getMarkupDiffPixelsCount')
-const Bundler = require('parcel-bundler')
 const fs = require('fs')
 
 describe('Screenshots tests', () => {
   beforeAll(async () => {
+    try { fs.mkdirSync('test/.tmp') } catch (e) { }
     try { fs.mkdirSync('test/diff') } catch (e) { }
-    const bundler = new Bundler('test/fixtures/_loader.pug', {
-      outDir: 'test/.tmp',
-      watch: false,
-      cache: false,
-      publicUrl: './'
-    })
-    await bundler.bundle()
   })
 
   describe('desktop (1920px)', () => {

@@ -6,7 +6,7 @@ const pixelmatch = require('pixelmatch')
 module.exports = async function (pageName, screenshotName) {
   // !! Danger fast dirty code
   const targetScreenshotPath = path.join(__dirname, `./fixtures/screenshots/${screenshotName}.png`)
-  const testPagePath = path.join(__dirname, `./.tmp/${pageName}.html`)
+  const testPagePath = path.join(__dirname, `./fixtures/pages/${pageName}.html`)
   const testScreenshotPath = path.join(__dirname, `./.tmp/${screenshotName}.png`)
   const diffScreenshotPath = path.join(__dirname, `./diff/${screenshotName}.png`)
 
