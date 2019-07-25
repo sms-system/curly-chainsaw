@@ -1002,3 +1002,19 @@
 .subscription__title {
   margin-bottom: var(--space-xl);
 }
+.event {
+  min-height: 333px;
+}
+.event__preview {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  width: auto;
+  margin-bottom: var(--space-xl);
+}
+.event__speaker {
+  margin-right: var(--space-xs);
+}
+.event__title {
+  margin-bottom: var(--space-s);
+}
