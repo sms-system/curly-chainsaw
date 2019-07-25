@@ -1,11 +1,66 @@
 doctype html
 html
   head
-    title Решение задания №1 — ШРИ, Москва, осень 2019
-  body
-    ul
-      h1 Решение задания №1 — ШРИ, Москва, осень 2019
-      li: a(href="./index.pug") Главная страница
-      li: a(href="./product.pug") Страница продукта
-      li: a(href="./collect.pug") Страница сбора средств
-      li: a(href="./content.pug") Контентная страница
+    title Задание №1 — ШРИ, Москва, осень 2019
+    link(rel="stylesheet", href="../style.styl")
+    style.
+      .text_size_1 { font-size: 38px; line-height: 48px }
+      .text_size_2 { font-size: 22px; line-height: 28px }
+      .product { min-height: 300px }
+      .product .image { height: 200px; background-size: cover; }
+      .product .index_img { background-image: url('../../test/fixtures/screenshots/index_desktop.png') }
+      .product .content_img { background-image: url('../../test/fixtures/screenshots/content_desktop.png') }
+      .product .product_img { background-image: url('../../test/fixtures/screenshots/product_desktop.png') }
+      .product .collect_img { background-image: url('../../test/fixtures/screenshots/collect_desktop.png') }
+      @media (max-width: 1144px) {
+        .grid_m-columns_12 {
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .grid__fraction_m-col_3 {
+            grid-column: span 3;
+        }
+      }
+      @media (max-width: 900px) {
+        .grid_m-columns_12 {
+            grid-template-columns: 1fr;
+        }
+        .grid__fraction_m-col_3 {
+            grid-column: span 1;
+        }
+        .product .image { background-size: contain; }
+      }
+  body.theme_gap_small.theme_color_project-default.theme_size_default.theme_space_default
+    script(src="../../build/script.js")
+    include:tpl ../content_blocks/header+onoffswitch/block.tpl
+    .layout
+      .layout__container.layout__container_size_s.layout__container_align_center
+        h1.text.text_size_1.text_view_primary.text_type_h1 Задание №1 — ШРИ, Москва, осень 2019
+      .layout__container.layout__container_size_m.layout__container_align_center
+        .grid.grid.grid_m-columns_12.grid_col-gap_half.grid_row-gap_half
+          a(href="./index.pug").grid__fraction.grid__fraction_m-col_3
+            .product.card.card_view_default.card_border_all
+              .product__content.card__content.card__content_space-a_m
+                .product__image.theme_color_project-default: .image.index_img
+              .product__footer.card__footer.card__footer_space-a_m
+                .text.text_view_link.text_size_2 Главная страница
+          a(href="./product.pug").grid__fraction.grid__fraction_m-col_3
+            .product.card.card_view_default.card_border_all
+              .product__content.card__content.card__content_space-a_m
+                .product__image.theme_color_project-default
+                  .image.product_img
+              .product__footer.card__footer.card__footer_space-a_m
+                .text.text_view_link.text_size_2 Страница продукта
+          a(href="./collect.pug").grid__fraction.grid__fraction_m-col_3
+            .product.card.card_view_default.card_border_all
+              .product__content.card__content.card__content_space-a_m
+                .product__image.theme_color_project-default
+                  .image.collect_img
+              .product__footer.card__footer.card__footer_space-a_m
+                .text.text_view_link.text_size_2 Страница сбора средств
+          a(href="./content.pug").grid__fraction.grid__fraction_m-col_3
+            .product.card.card_view_default.card_border_all
+              .product__content.card__content.card__content_space-a_m
+                .product__image.theme_color_project-default
+                  .image.content_img
+              .product__footer.card__footer.card__footer_space-a_m
+                .text.text_view_link.text_size_2 Контентная страница

@@ -595,14 +595,26 @@
 .text_type_p {
   margin: 15px 0 21px;
 }
+.text_view_primary {
+  color: var(--text-color-primary);
+}
 .text_view_primary .text__word::after {
   background-color: var(--text-color-primary);
+}
+.text_view_secondary {
+  color: var(--text-color-secondary);
 }
 .text_view_secondary .text__word::after {
   background-color: var(--text-color-secondary);
 }
+.text_view_ghost {
+  color: var(--text-color-ghost);
+}
 .text_view_ghost .text__word::after {
   background-color: var(--text-color-ghost);
+}
+.text_view_link {
+  color: var(--text-color-link);
 }
 .text_view_link .text__word::after {
   background-color: var(--text-color-link);
