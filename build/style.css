@@ -959,8 +959,14 @@
 }
 .collect__done {
   height: 8px;
-  background-color: var(--bg-color-accent);
-  background-color: #1a72f2;
+  --bg-color-default: #0070f0;
+  --bg-color-accent: #fff;
+  --bg-color-border: #fff;
+  --text-color-primary: #fff;
+  --text-color-secondary: rgba(255,255,255,0.6);
+  --text-color-ghost: rgba(255,255,255,0.3);
+  --text-color-link: #fff;
+  background-color: #0070f0;
 }
 .collect .image {
   height: 160px;
